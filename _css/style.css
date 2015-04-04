@@ -1,3 +1,86 @@
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Source Sans Pro", "Lato", sans-serif;
+    font-size: 15px;
+    background-color: #f0f0f0;
+}
+
+a {
+    color: #50a02f;
+}
+
+.main-button {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    /*font-weight: 600;*/
+    color: #fff;
+    background-color: #50a02f;
+    line-height: 56px;
+    padding: 0 30px;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.header-nav {
+    position: relative;
+}
+
+.top-bar {
+    background-color: #50a02f;
+}
+
+.top-bar a {
+    display: block;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 48px;
+    width: 48px;
+    text-align: center;
+}
+
+.top-bar a:hover, .main-menu-toggle.menu-active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5ab435;
+}
+
+.main-nav {
+    list-style: none;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    background-color: #5ab435;
+    display: none;
+}
+
+.main-nav li {
+    border-bottom: 1px solid #64c63c;
+}
+
+.main-nav li:last-child {
+    border-bottom: 0;
+}
+
+.main-nav a {
+    display: block;
+    color: #f0f0f0;
+    padding: 8px 14px;
+}
+
+.main-nav a:hover {
+    text-decoration: none;
+    background-color: #64c63c;
+}
+
+@media screen and (min-width: 769px) {
+    .main-nav {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        min-width: 240px;
+        z-index: 1000;
+    }
 }

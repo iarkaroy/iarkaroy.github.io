@@ -1,0 +1,18 @@
+# Site settings
+title: Arka Roy
+#email: your-email@domain.com
+description: Provides professional services on web design, development, web application, digital marketing, social marketing.
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
+#baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.arkaroy.net" # the base hostname & protocol for your site
+permalink: /:categories/:title/
+facebook_username: iarkaroy
+twitter_username: iarkaroy
+behance_username:  iarkaroy
+github_username:  iarkaroy
+img: /assets/image/
+
+# Build settings
+#markdown: kramdown

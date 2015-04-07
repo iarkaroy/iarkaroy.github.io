@@ -1,0 +1,26 @@
+---
+title: Portfolio
+layout: default
+permalink: /portfolio/
+---
+
+<div class="hero">
+    <i class="icon-arkaroy-logo" style="font-size: 60px;"></i>
+    <h1>Portfolio</h1>
+    <h2>Showcase of some of my works.</h2>
+</div>
+
+<div class="post-wrapper">
+    {% for post in site.categories['portfolio'] %}
+    <a href="{{ post.url }}" class="portfolio-thumbs">
+        {% if post.thumbnail %}
+            <img src="{{ site.img }}{{ post.thumbnail }}">
+        {% endif %}
+        <span>{{ post.title }}</span>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="section-divider"></div>
+
+{% include about.html %}

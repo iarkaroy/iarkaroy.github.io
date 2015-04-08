@@ -2,6 +2,7 @@
 title: "Pixi: Website Layout"
 layout: project
 topic: "Layout Design"
+description: This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 thumbnail: pixi-website-layout-thumbnail.jpg
 ---
 This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.

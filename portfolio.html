@@ -7,16 +7,16 @@ permalink: /portfolio/
 <div class="hero">
     <i class="icon-arkaroy-logo" style="font-size: 60px;"></i>
     <h1>Portfolio</h1>
-    <h2>Showcase of some of my works.</h2>
+    <h2>Showing some of my works.</h2>
 </div>
 
-<div class="post-wrapper">
+<div class="post-wrapper text-center">
     {% for post in site.categories['portfolio'] %}
     <a href="{{ post.url }}" class="portfolio-thumbs">
         {% if post.thumbnail %}
             <img src="{{ site.img }}{{ post.thumbnail }}">
         {% endif %}
-        <span>{{ post.title }}</span>
+        <span><strong>{{ post.title }}</strong></span>
     </a>
     {% endfor %}
 </div>

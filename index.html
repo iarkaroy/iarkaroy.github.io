@@ -14,16 +14,17 @@ layout: default
 
 <h2 class="text-center text-uppercase"><strong>Portfolio</strong></h2>
 <div class="section-title-sep"></div>
-<div class="post-wrapper">
-    {% for post in site.categories['portfolio'] limit:3 %}
+<div class="post-wrapper text-center">
+    {% for post in site.categories['portfolio'] limit:4 %}
     <a href="{{ post.url }}" class="portfolio-thumbs">
         {% if post.thumbnail %}
             <img src="{{ site.img }}{{ post.thumbnail }}">
         {% endif %}
-        <span>{{ post.title }}</span>
+        <span><strong>{{ post.title }}</strong></span>
     </a>
     {% endfor %}
 </div>
+<br>
 <div class="text-center">
     <a href="/portfolio/" class="primary-button">Full Portfolio</a>
 </div>

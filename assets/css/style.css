@@ -213,13 +213,17 @@ footer a:hover {
     height: auto;
 }
 
-.post-content {
+.post {
     float: left;
     width: 100%;
     margin-left: -300px;
     padding-left: 315px;
     padding-right: 30px;
     border-right: 1px solid #ddd;
+}
+
+.post-content img {
+    border: 1px solid #ccc;
 }
 
 .post-sidebar {
@@ -229,7 +233,7 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .post-content {
+    .post {
         margin-left: 0;
         padding-left: 15px;
         padding-right: 15px;
@@ -242,7 +246,9 @@ footer a:hover {
 
 .portfolio-thumbs {
     display: inline-block;
-    max-width: 300px;
+    max-width: 240px;
+    margin: 10px;
+    vertical-align: top;
 }
 .portfolio-thumbs img,
 .portfolio-thumbs span {
@@ -251,4 +257,33 @@ footer a:hover {
 .portfolio-thumbs img {
     max-width: 100%;
     height: auto;
+    border: 1px solid #ccc;
+}
+.portfolio-thumbs:hover img {
+    border-color: #666;
+}
+.portfolio-thumbs span {
+    margin-top: 10px;
+}
+
+.other-projects-list {
+    list-style: none;
+    padding: 0;
+}
+
+.social-share {
+    margin-top: 40px;
+}
+.social-share a {
+    display: inline-block;
+    margin: 5px;
+    background-color: #50a02f;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+}
+.social-share a:hover {
+    background-color: #222;
 }

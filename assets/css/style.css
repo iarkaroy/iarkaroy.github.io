@@ -49,7 +49,6 @@ a:active {
 .paragraph-center {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
     padding: 0 15px;
     font-size: 16px;
 }
@@ -286,4 +285,47 @@ footer a:hover {
 }
 .social-share a:hover {
     background-color: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 1%;
+}
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: #aaa;
+}
+.contact-form input:focus,
+.contact-form input:active,
+.contact-form textarea:focus,
+.contact-form textarea:active {
+    border-color: #50a02f;
+    outline: 0;
+}
+.contact-form button:hover,
+.contact-form button:active {
+    outline: 0;
+}
+.contact-form input {
+    width: 48%;
+}
+.contact-form textarea {
+    width: 98%;
+}
+.contact-form input.error {
+    border-color: #a00;
+}
+@media screen and (max-width: 768px) {
+    .contact-form input {
+        width: 98%;
+    }
+}
+.form-sending,
+.form-sent {
+    padding: 60px 15px;
+    display: none;
 }

@@ -3,8 +3,10 @@
 {% include header.html %}
 
 <div class="hero">
-    <h1>{{ page.title }}</h1>
-    <h3>{% if page.topic %} {{ page.topic }} {%endif%}</h3>
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <h3 class="post-meta">{% if page.topic %} {{ page.topic }} {%endif%}</h3>
+    </header>
 </div>
 
 <div class="post-wrapper clearfix">
@@ -23,9 +25,9 @@
         <h3>Other Projects</h3>
         <ul class="other-projects-list">
             {% for post in site.categories['portfolio'] %}
-                {% if post.url != page.url %}
-                <li><a href="{{ post.url }}"><i class="fa fa-hand-o-right fa-fw"></i>&nbsp; {{ post.title }}</a></li>
-                {% endif %}
+            {% if post.url != page.url %}
+            <li><a href="{{ post.url }}"><i class="fa fa-hand-o-right fa-fw"></i>&nbsp; {{ post.title }}</a></li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>

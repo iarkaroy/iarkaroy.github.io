@@ -30,6 +30,12 @@ pre {
     border-left: 4px solid #aaa;
     background: #eaeaea;
     border-radius: 0;
+    word-break: normal;
+    word-wrap: normal;
+}
+
+pre code {
+    white-space: pre;
 }
 
 .section-divider {
@@ -233,12 +239,17 @@ footer a:hover {
 }
 
 .post {
+    /*
     float: left;
     width: 100%;
     margin-left: -300px;
     padding-left: 315px;
     padding-right: 30px;
     border-right: 1px solid #ddd;
+    */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .post-content img {
@@ -246,12 +257,16 @@ footer a:hover {
 }
 
 .post-sidebar {
+    /*
     width: 270px;
     float: right;
     padding-right: 15px;
+    */
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
+    /*
     .post {
         margin-left: 0;
         padding-left: 15px;
@@ -261,6 +276,7 @@ footer a:hover {
         width: 100%;
         padding-left: 15px;
     }
+    */
 }
 
 .portfolio-thumbs {

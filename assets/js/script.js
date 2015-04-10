@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    
+    $(".js-force-center").wrap('<div class="text-center"></div>')
+    
     $(".main-menu-toggle").click(function (e) {
         e.preventDefault();
         if ($(this).hasClass("menu-active")) {

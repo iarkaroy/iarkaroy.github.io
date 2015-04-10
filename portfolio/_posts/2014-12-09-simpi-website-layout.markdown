@@ -7,6 +7,6 @@ thumbnail: simpi-minimal-flat-website-layout-thumbnail.jpg
 ---
 This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 <br><br>
-<div class="text-center" markdown="1"><a href="http://bit.ly/1DZKREH" class="primary-button" target="_blank">Download PSD</a></div>
+<a href="http://bit.ly/1DZKREH" class="primary-button js-force-center" target="_blank">Download PSD</a>
 <br><br>
 ![Project Screenshot]({{ site.img }}simpi-minimal-flat-website-layout-01.jpg)

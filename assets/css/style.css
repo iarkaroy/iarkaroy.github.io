@@ -18,6 +18,20 @@ a:active {
     color: #222; //#5ab435;
 }
 
+code {
+    color: #222;
+    background: none;
+    font-size: 1em;
+}
+pre {
+    font-size: 1em;
+    color: #222;
+    border: 0;
+    border-left: 4px solid #aaa;
+    background: #eaeaea;
+    border-radius: 0;
+}
+
 .section-divider {
     display: block;
     width: 100%;

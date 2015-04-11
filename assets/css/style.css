@@ -211,6 +211,7 @@ footer a:hover {
 .primary-button {
     color: #fff;
     background-color: #50a02f;
+    font-size: 18px;
 }
 .primary-button:hover,
 .primary-button:focus,
@@ -230,7 +231,6 @@ footer a:hover {
 .post-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    font-size: 16px;
 }
 
 .post-wrapper img {
@@ -250,6 +250,7 @@ footer a:hover {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 15px;
+    font-size: 18px;
 }
 
 .post-content img {

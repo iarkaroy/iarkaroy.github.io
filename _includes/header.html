@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% if page.title %} {{ page.title }} - {% endif %} {{ site.title }}</title>
-        <meta name="description" content="{% if page.description %} {{ page.description }} {% elsif page.excerpt %} {{ page.excerpt | remove: '<p>' | remove: '</p>' }} {% else %} {{ site.description }} {% endif %}">
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}">
         <meta name="author" content="{{ site.author.name }}">
         <meta name="google-site-verification" content="Hoal6De7aoiiqdo7jTEmhXXXJo571pQuGeRjB3hY3-c">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
@@ -40,6 +40,10 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         -->
+        
+        <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+        <meta property="og:image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}default-thumbnail.jpg{% endif %}">
+        
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;

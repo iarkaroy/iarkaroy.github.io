@@ -3,7 +3,7 @@ title: "Simpi: Website Layout"
 layout: project
 topic: "Layout Design"
 description: This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
-thumbnail: simpi-minimal-flat-website-layout-thumbnail.jpg
+thumbnail: simpi-minimal-flat-website-layout-thumbnail
 ---
 This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 <br><br>

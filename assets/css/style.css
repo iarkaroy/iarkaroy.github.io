@@ -282,8 +282,9 @@ footer a:hover {
 
 .portfolio-thumbs {
     display: inline-block;
-    max-width: 240px;
+    max-width: 300px;
     margin: 10px;
+    margin-bottom: 20px;
     vertical-align: top;
 }
 .portfolio-thumbs img,

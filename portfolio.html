@@ -14,7 +14,7 @@ permalink: /portfolio/
     {% for post in site.categories['portfolio'] %}
     <a href="{{ post.url }}" class="portfolio-thumbs">
         {% if post.thumbnail %}
-            <img src="{{ site.img }}{{ post.thumbnail }}">
+            <img src="{{ site.img }}{{ post.thumbnail }}-300.jpg">
         {% endif %}
         <span><strong>{{ post.title }}</strong></span>
     </a>

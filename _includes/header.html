@@ -45,11 +45,11 @@
         <!-- Schema.org markup for Google+ -->
         <meta itemprop="name" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
         <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}">
-        <meta itemprop="image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}default-thumbnail.jpg{% endif %}">
+        <meta itemprop="image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}.jpg{% else %}default-thumbnail.jpg{% endif %}">
 
         <!-- Open Graph data for Facebook -->
         <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-        <meta property="og:image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}default-thumbnail.jpg{% endif %}">
+        <meta property="og:image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}.jpg{% else %}default-thumbnail.jpg{% endif %}">
         <meta property="og:type" content="article">
         <meta property="og:url" content="{{ site.url }}{{ page.url | remove: 'index.html' }}">
         <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}">
@@ -59,7 +59,7 @@
         <meta name="twitter:url" content="{{ site.url }}{{ page.url | remove: 'index.html' }}">
         <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
         <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}">
-        <meta name="twitter:image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}default-thumbnail.jpg{% endif %}">
+        <meta name="twitter:image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}.jpg{% else %}default-thumbnail.jpg{% endif %}">
         <meta name="twitter:site" content="@iarkaroy">
         <meta name="twitter:creator" content="@iarkaroy">
 

@@ -10,13 +10,13 @@ permalink: /portfolio/
     <h2>Showing some of my works.</h2>
 </div>
 
-<div class="post-wrapper text-center" style="font-size: 16px;">
+<div class="post-wrapper text-center">
     {% for post in site.categories['portfolio'] %}
     <a href="{{ post.url }}" class="portfolio-thumbs">
         {% if post.thumbnail %}
             <img src="{{ site.img }}{{ post.thumbnail }}-300.jpg">
         {% endif %}
-        <span><strong>{{ post.title }}</strong></span>
+        <!--<span><strong>{{ post.title }}</strong></span>-->
     </a>
     {% endfor %}
 </div>

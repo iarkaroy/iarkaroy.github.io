@@ -192,26 +192,42 @@ footer a:hover {
 }
 .social-media-links a {
     display: inline-block;
+    font-size: 24px;
+    line-height: 40px;
+    width: 44px;
     margin: 5px;
-    min-width: 100px;
-    border:1px solid #50a02f;
-    padding: 6px 0;
+    text-align: center;
+    border:2px solid #50a02f;
+    border-radius: 21px;
+    position: relative;
+}
+.social-media-links a span {
+    position: absolute;
+    top: 100%;
+    width: 300%;
+    left: -38px;
+    font-size: 14px;
+    line-height: 28px;
+    display: none;
 }
 .social-media-links a:hover {
     border-color: #222;
+}
+.social-media-links a:hover span {
+    display: block;
 }
 
 .primary-button, .secondary-button {
     display: inline-block;
     text-transform: uppercase;
-    padding: 6px 14px;
+    padding: 0 20px;
+    line-height: 40px;
     border: 1px solid #50a02f;
     margin: 5px;
 }
 .primary-button {
     color: #fff;
     background-color: #50a02f;
-    font-size: 18px;
 }
 .primary-button:hover,
 .primary-button:focus,
@@ -231,6 +247,7 @@ footer a:hover {
 .post-wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    font-size: 16px;
 }
 
 .post-wrapper img {
@@ -250,7 +267,6 @@ footer a:hover {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 15px;
-    font-size: 18px;
 }
 
 .post-content img {
@@ -284,7 +300,6 @@ footer a:hover {
     display: inline-block;
     max-width: 300px;
     margin: 10px;
-    margin-bottom: 20px;
     vertical-align: top;
 }
 .portfolio-thumbs img,

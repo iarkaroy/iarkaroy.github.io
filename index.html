@@ -14,13 +14,13 @@ layout: default
 
 <h2 class="text-center text-uppercase"><strong>Latest Works</strong></h2>
 <div class="section-title-sep"></div>
-<div class="post-wrapper text-center" style="font-size: 16px;">
+<div class="post-wrapper text-center">
     {% for post in site.categories['portfolio'] limit:6 %}
     <a href="{{ post.url }}" class="portfolio-thumbs">
         {% if post.thumbnail %}
         <img src="{{ site.img }}{{ post.thumbnail }}-300.jpg">
         {% endif %}
-        <span><strong>{{ post.title }}</strong></span>
+        <!--<span><strong>{{ post.title }}</strong></span>-->
     </a>
     {% endfor %}
 </div>
@@ -50,7 +50,7 @@ layout: default
 
 <br>
 <div class="text-center">
-    <a href="/blog/" class="primary-button">View Blog</a>
+    <a href="/blog/" class="primary-button">All Articles</a>
 </div>
 
 <div class="section-divider"></div>

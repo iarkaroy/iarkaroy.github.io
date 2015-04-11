@@ -60,9 +60,9 @@
         <meta name="twitter:url" content="{{ site.url }}{{ page.url | remove: 'index.html' }}">
         <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
         <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}">
+        <meta name="twitter:image" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}default-thumbnail.jpg{% endif %}">
+        <meta name="twitter:site" content="@iarkaroy">
         <meta name="twitter:creator" content="@iarkaroy">
-        <meta name="twitter:image:src" content="{{ site.url }}{{ site.img }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}default-thumbnail.jpg{% endif %}">
-
 
         <script>
             (function (i, s, o, g, r, a, m) {

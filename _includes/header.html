@@ -9,8 +9,8 @@
         <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}">
         <meta name="author" content="{{ site.author.name }}">
         <meta name="google-site-verification" content="Hoal6De7aoiiqdo7jTEmhXXXJo571pQuGeRjB3hY3-c">
-        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/assets/css/style.css">
         <link rel="stylesheet" href="/assets/css/font.css">
@@ -84,22 +84,26 @@
 
     <body>
 
-        <header>
+        <header class="page-header clearfix">
 
-            <nav class="header-nav">
+            <a href="{{ site.url }}" class="logo pull-left">
+                <i class="icon-arkaroy-logo"></i>
+            </a>
 
-                <div class="top-bar clearfix">
-                    <a href="{{ site.url }}" class="logo pull-left">
-                        <i class="icon-arkaroy-logo"></i>
-                    </a>
-                    <a href="#" class="main-menu-toggle pull-right">
-                        <i class="fa fa-bars"><span class="sr-only">Menu</span></i>
-                    </a>
-                    <ul class="main-nav">
-                        <li><a href="/portfolio/">Portfolio</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                    </ul>
-                </div>
+            <nav class="main-nav">
+
+                <ul class="menu-collapse">
+                    <li><a href="" class="menu-collapse-toggle"><i class="fa fa-bars fa-fw fa-lg"></i></a></li>
+                </ul>
+                
+                <ul class="main-menu">
+                    <li><a href="{{ site.url }}">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/portfolio/">Portfolio</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>                
 
             </nav>
+
         </header>

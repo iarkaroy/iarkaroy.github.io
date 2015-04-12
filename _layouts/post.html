@@ -1,15 +1,15 @@
 {% include header.html %}
 
-<div class="hero">
-    <header class="post-header">
-        <h1 class="post-title">{{ page.title }}</h1>
-        <p class="post-meta"><em>{{ page.date | date: "%b %-d, %Y" }} by {{ site.author.name }}</em></p>
-    </header>
-</div>
-
 <div class="post-wrapper clearfix">
 
     <div class="post">
+        
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <p class="post-meta"><em>{{ page.date | date: "%b %-d, %Y" }} by {{ site.author.name }}</em></p>
+        </header>
+        
+        <br><br>
 
         <article class="post-content">
             {{ content }}

@@ -1,11 +1,12 @@
-$font-family: "Merriweather", serif;
+$base-font: "Arimo", sans-serif;
+$heading-font: "Merriweather", serif;
 $font-size: 16px;
 $text-color: #333;
 $theme-color: #50a02f;
 $dark-color: #222;
 
 body {
-    font-family: $font-family;
+    font-family: $base-font;
     background-color: #fff;
     font-size: $font-size;
     color: $text-color;
@@ -19,8 +20,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: inherit;
-    font-weight: 400;
+    font-family: $heading-font;
+    font-weight: normal;
     color: inherit;
     line-height: 1.3;
     margin-top: 0.5em;
@@ -71,16 +72,18 @@ a {
 }
 
 code {
-    color: $dark-color;
-    background: none;
+    display: inline-block;
+    color: #111;
+    background: lighten($theme-color, 50%);
     font-size: $font-size;
+    padding: 0 5px;
 }
 pre {
     font-size: $font-size;
     color: $dark-color;
     border: 0;
-    border-left: 4px solid #aaa;
-    background: #eaeaea;
+    border-left: 4px solid darken($theme-color, 10%);
+    background: lighten($theme-color, 50%);
     border-radius: 0;
     word-break: normal;
     word-wrap: normal;
@@ -88,5 +91,100 @@ pre {
     
     code {
         white-space: pre;
+        background: none;
+        color: #111;
     }
+}
+
+.clearfix:after {
+    display: block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    content: "";
+    clear: both;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+.text-nowrap {
+    white-space: nowrap;
+}
+.text-lowercase {
+    text-transform: lowercase;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-capitalize {
+    text-transform: capitalize;
+}
+.text-muted {
+    color: #777;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.section-divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    margin: 80px 0;
+}
+
+.section-title-sep {
+    display: block;
+    width: 30px;
+    height: 1px;
+    overflow: hidden;
+    background-color: #666;
+    margin: 20px auto;
+}
+
+.text-underline {
+    display: inline-block;
+    border-bottom: 1px solid #666;
+    font-size: inherit;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.paragraph-center {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero {
+    background-color: #222;
+    min-height: 260px;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80px;
 }

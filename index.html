@@ -33,7 +33,7 @@ layout: default
 <div class="section-title-sep"></div>
 <div class="post-wrapper text-center">
     {% for post in site.categories['portfolio'] limit:6 %}
-    <a href="{{ post.url }}" class="portfolio-thumbs">
+    <a href="{{ post.url }}" class="portfolio-thumbs" rel="bookmark">
         {% if post.thumbnail %}
         <img src="{{ site.img }}{{ post.thumbnail }}-300.jpg">
         {% endif %}

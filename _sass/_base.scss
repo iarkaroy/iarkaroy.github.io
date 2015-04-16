@@ -1,6 +1,6 @@
-$base-font: "Arimo", sans-serif;
-$heading-font: "Merriweather", serif;
-$font-size: 16px;
+$base-font: "Asap", "Arimo", sans-serif;
+$heading-font: "Asap", "Merriweather", serif;
+$font-size: 18px;
 $text-color: #333;
 $theme-color: #50a02f;
 $dark-color: #222;
@@ -58,6 +58,7 @@ h6 {
 
 p {
     margin: 0 0 10px;
+    line-height: 1.5;
 }
 
 a {

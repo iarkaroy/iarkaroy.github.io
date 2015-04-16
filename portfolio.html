@@ -4,14 +4,14 @@ layout: default
 permalink: /portfolio/
 ---
 
-<h1 class="text-center text-big"><span class="text-underline">Portfolio</span></h1>
-<h4 class="text-center">Showing some of my works.</h4>
+<h1>Portfolio</h1>
+<h5>Showing some of my works.</h5>
 
 <br><br>
 
-<div class="post-wrapper text-center">
+<div>
     {% for post in site.categories['portfolio'] %}
-    <a href="{{ post.url }}" class="portfolio-thumbs">
+    <a href="{{ post.url }}" class="portfolio-thumbs" rel="bookmark">
         {% if post.thumbnail %}
             <img src="{{ site.img }}{{ post.thumbnail }}-300.jpg">
         {% endif %}
@@ -19,7 +19,3 @@ permalink: /portfolio/
     </a>
     {% endfor %}
 </div>
-
-<div class="section-divider"></div>
-
-{% include about.html %}

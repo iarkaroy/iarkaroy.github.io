@@ -1,0 +1,69 @@
+.page-wrapper {
+    @extend .clearfix;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.page-header {
+    width: 100%;
+    background-color: $theme-color;
+    padding: 2em;
+    font-size: 0.9em;
+}
+
+.page-header.home {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.page-content {
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+    img {
+        border: 1px solid #ccc;
+    }
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.display-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 1025px) {
+    .page-header {
+        width: 40%;
+        background-color: $theme-color;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2em;
+    }
+
+    .page-header.home {
+        width: 100%;
+    }
+
+    .page-content {
+        width: 60%;
+        margin-left: 40%;
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-header, .page-content {
+        padding: 0.8em;
+    }
+}

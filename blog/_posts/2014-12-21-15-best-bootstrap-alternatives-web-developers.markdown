@@ -20,7 +20,7 @@ Skeleton provides eventually obtained a face lift. It’s an overall renovation 
 
 ## [Zimit](http://firezenk.github.io/zimit/)
 
-![Skeleton]({{ site.img }}20141221-zimit.jpg)
+![Zimit]({{ site.img }}20141221-zimit.jpg)
 
 Zimit is a very lightweight HTML5 framework for prototyping responsive web site designs for web developers. It’s based on the LESS CSS pre-processor and provides a framework designed for scalability and code that’s easy to read and understand. It supports all modern web browsers and compiled it’s only 88kb in total file size.
 
@@ -28,7 +28,7 @@ Zimit is a very lightweight HTML5 framework for prototyping responsive web site 
 
 ## [Ink](http://ink.sapo.pt/)
 
-![Skeleton]({{ site.img }}20141221-ink.jpg)
+![Ink]({{ site.img }}20141221-ink.jpg)
 
 Ink is an interface kit for the rapid development of web interfaces that aims to be easy to use and expand upon. It’s also based on LESS and offers a fluid grid and other responsive development features for creating both large and small website projects. InK’s primary differentiator is how it handles layout, allowing flexibility in how blocks fall within the grid.
 
@@ -36,7 +36,7 @@ Ink is an interface kit for the rapid development of web interfaces that aims to
 
 ## [CardinalCSS](http://cardinalcss.com/)
 
-![Skeleton]({{ site.img }}20141221-cardinalcss.jpg)
+![CardinalCSS]({{ site.img }}20141221-cardinalcss.jpg)
 
 CardinalCSS is often a CSS composition designed with the target effectiveness, readability and many significantly maintainability. CardinalCSS explores some current approaches including mobile-first pertaining to framing up the grid; along with CSS Field Product of which lets you very easily establish element wider along with top.
 
@@ -44,7 +44,7 @@ CardinalCSS is often a CSS composition designed with the target effectiveness, r
 
 ## [ConciseCSS](http://concisecss.com/)
 
-![Skeleton]({{ site.img }}20141221-concisecss.jpg)
+![ConciseCSS]({{ site.img }}20141221-concisecss.jpg)
 
 ConciseCSS is usually a CSS platform – devoid of the bloat. This can be a slender platform built together with Sass, MUCH LESS, and Stylus which often paves the golden path to CSS maintainability. But, if you desire simple straightforward vanilla CSS, you can have that will likewise.
 
@@ -52,7 +52,7 @@ ConciseCSS is usually a CSS platform – devoid of the bloat. This can be a slen
 
 ## [Pure](http://purecss.io/)
 
-![Skeleton]({{ site.img }}20141221-purecss.jpg)
+![Pure]({{ site.img }}20141221-purecss.jpg)
 
 If you are planning to build a web app that works both on desktop and mobile, then you should consider of using Pure from Yahoo. Pure has much better performance when it comes to mobile devices than Bootstrap. As its name suggests, Pure comes as a pure CSS framework only.  Build on top of Normalize.css, Pure has an extremely small file size with just 4.5KB (minified and gzip).
 
@@ -60,7 +60,7 @@ If you are planning to build a web app that works both on desktop and mobile, th
 
 ## [PowertoCSS](http://powertoweb.com/powertocss/)
 
-![Skeleton]({{ site.img }}20141221-powertocss.jpg)
+![PowertoCSS]({{ site.img }}20141221-powertocss.jpg)
 
 PowertoCSS is usually light in weight as well as a reliable frontend framework. Course bands which can be utilized to construct the particular grid along with use styles are usually quick and easy to not forget button. It’s also possible to create your personal design. Brain to the site their StarterKit to get going.
 
@@ -68,7 +68,7 @@ PowertoCSS is usually light in weight as well as a reliable frontend framework. 
 
 ## [Furtive](http://furtive.co/)
 
-![Skeleton]({{ site.img }}20141221-furtive.jpg)
+![Furtive]({{ site.img }}20141221-furtive.jpg)
 
 Furtive can be a mobile-first CSS structure built throughout the cutting-edge web specifications including the employment of Flexbox to the grid and also rem model intended for dimensions factors (including font size). Furtive holds a little CSS footprint by means of not supporting elderly browsers (World Wide Web Explorer) simply because they involve a few CSS hacking. For this reason Furtive can be a great structure should you be creating an internet site in the future.
 
@@ -76,7 +76,7 @@ Furtive can be a mobile-first CSS structure built throughout the cutting-edge we
 
 ## [UiKit](http://getuikit.com/)
 
-![Skeleton]({{ site.img }}20141221-uikit.jpg)
+![UiKit]({{ site.img }}20141221-uikit.jpg)
 
 UIkit is a free, lightweight and modular front-end framework. Developed with LESS, UIkit has a well-structured, expandable and maintainable code. It also offers a grid system which is responsive, fluid and nestable. With UIkit you can build navigation, buttons, modals, dropdown and more responsively. Its comprehensive documentation will make you easier to get started with UIkit.
 
@@ -84,7 +84,7 @@ UIkit is a free, lightweight and modular front-end framework. Developed with LES
 
 ## [BassCSS](http://www.basscss.com/)
 
-![Skeleton]({{ site.img }}20141221-basscss.jpg)
+![BassCSS]({{ site.img }}20141221-basscss.jpg)
 
 BassCSS provides a lightweight group of starting factor designs, utilities, along with design along with shade designs, inside modular variety for developing a responsive world-wide-web request. Your SCSS files are generally integrated to be able to customize the type simply. You possibly can play together with typography, whitened space, breakpoints.
 
@@ -92,7 +92,7 @@ BassCSS provides a lightweight group of starting factor designs, utilities, alon
 
 ## [Mueller](http://muellergridsystem.com/)
 
-![Skeleton]({{ site.img }}20141221-mueller.jpg)
+![Mueller]({{ site.img }}20141221-mueller.jpg)
 
 Mueller is a modular sensitive grid technique built over Sass and also Compass. Using Mueller, you are able to assemble the actual grid sometimes by building courses right to the actual HTML aspects, or perhaps in case you like your current HTML aspects for being well put together and also clean, when using the grid() perform. Mueller grid may be used in tandem using the Masonry JavaScript selection to manufacture a Pinterest-like design.
 
@@ -100,7 +100,7 @@ Mueller is a modular sensitive grid technique built over Sass and also Compass. 
 
 ## [HTML5 Boilerplate](http://html5boilerplate.com/)
 
-![Skeleton]({{ site.img }}20141221-html5boilerplate.jpg)
+![HTML5 Boilerplate]({{ site.img }}20141221-html5boilerplate.jpg)
 
 HTML5 Boilerplate isn’t really a framework but rather it is a professional front-end template to give you a head start building a robust and adaptable web app. Boilerplate comes baked with Modernizr, Normalize.css and jQuery to help you create pages that work across browsers and can adapt to browsers that don’t offer support for certain features.
 
@@ -108,7 +108,7 @@ HTML5 Boilerplate isn’t really a framework but rather it is a professional fro
 
 ## [Tuktuk](http://tuktuk.tapquo.com/)
 
-![Skeleton]({{ site.img }}20141221-tuktuk.jpg)
+![Tuktuk]({{ site.img }}20141221-tuktuk.jpg)
 
 Tuktuk is usually a really exclusive identify for a platform. When compared with Bootstrap or Groundwork, Tuktuk is significantly light since it only comes with simply the correct amount of elements to construct a presentable web site as well as to the grid system, fundamental design pertaining to typography, dining tables, and also some USER INTERFACE such as navbar and also modals.
 
@@ -116,7 +116,7 @@ Tuktuk is usually a really exclusive identify for a platform. When compared with
 
 ## [Base](http://matthewhartman.github.io/base/)
 
-![Skeleton]({{ site.img }}20141221-base.jpg)
+![Base]({{ site.img }}20141221-base.jpg)
 
 Base was made together with MUCH LESS and Sass, and it also includes merely essentially the most important associated with factors to construct websites: the particular grid and also the standard doing your hair associated with HTML factors. Base doesn’t include JavaScript factors, however an excellent great internet browser compatibility much in order that it works in spite of IE7.
 
@@ -124,6 +124,6 @@ Base was made together with MUCH LESS and Sass, and it also includes merely esse
 
 ## [Toast](http://daneden.github.io/Toast/)
 
-![Skeleton]({{ site.img }}20141221-toast.jpg)
+![Toast]({{ site.img }}20141221-toast.jpg)
 
 Through the SCSS stylesheet is included in the package, Toast allows you to easily configure the grid class names, the gutter, and even the column-base. For example, if you want the grid to be a 9-base column instead of 12, you can do that. Toast is a minimal CSS framework with very flexible configurations catered to meet your requirements.

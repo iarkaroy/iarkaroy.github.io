@@ -1,8 +1,13 @@
 footer {
-    display: block;
-    background-color: #50a02f;
-    color: #fff;
+    color: #aaa;
     margin-top: 80px;
-    font-size: 14px;
-    padding: 8px 15px;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    a {
+        color: #999;
+        &:hover {
+            color: #666;
+        }
+    }
 }

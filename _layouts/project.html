@@ -1,39 +1,32 @@
+---
+layout: default
+---
 
+<div>
 
-{% include header.html %}
+    <header class="entry-header">
+        <h1 class="entry-title">{{ page.title }}</h1>
+        <h4 class="entry-meta">{% if page.topic %} {{ page.topic }} {%endif%}</h4>
+    </header>
 
-<div class="post-wrapper clearfix">
+    <article class="entry-content">
+        {{ content }}
+    </article>
 
-    <div class="post">
-        
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <h4 class="post-meta">{% if page.topic %} {{ page.topic }} {%endif%}</h4>
-        </header>
-        
-        <br><br>
+    {% include social-share.html %}
 
-        <article class="post-content">
-            {{ content }}
-        </article>
+</div>    
 
-        {% include social-share.html %}
-
-    </div>    
-
-    <div class="post-sidebar">
-        <h3>Other Projects</h3>
-        <ul class="other-projects-list">
-            {% for post in site.categories['portfolio'] %}
-            {% if post.url != page.url %}
-            <li><a href="{{ post.url }}"><i class="fa fa-hand-o-right fa-fw"></i>&nbsp; {{ post.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-
+<div>
+    <h3>Other Projects</h3>
+    <ul class="other-projects-list">
+        {% for post in site.categories['portfolio'] %}
+        {% if post.url != page.url %}
+        <li><a href="{{ post.url }}" rel="bookmark"><i class="fa fa-hand-o-right fa-fw"></i>&nbsp; {{ post.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
 </div>
 
-{% include footer.html %}
 
 

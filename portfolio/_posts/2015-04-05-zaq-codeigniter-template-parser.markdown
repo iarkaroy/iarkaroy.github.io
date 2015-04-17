@@ -39,4 +39,4 @@ Once loaded, the Zaq library object will be available using: `$this->zaq`
 
 <br>
 
-For usage instructions and more, visit [How to use Zaq: Codeigniter Template Parser Engine]({% post_url 2015-04-08-how-to-use-zaq-codeigniter-template-parser %})
+For usage instructions and more, visit [How to use Zaq: Codeigniter Template Parser Engine]({{ site.url }}{% post_url 2015-04-08-how-to-use-zaq-codeigniter-template-parser %})

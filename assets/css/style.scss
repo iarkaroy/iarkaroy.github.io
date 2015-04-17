@@ -19,8 +19,7 @@
         color: #fff;
         line-height:30px;
         border:2px solid $theme-color;
-        border-radius:15px;
-        min-width:140px;
+        min-width:130px;
         margin: 0 10px 10px 0;
         i {
             width:30px;
@@ -28,17 +27,17 @@
             line-height:30px;
             background:#fff;
             color:$theme-color;
-            border-radius:15px;
         }
         span {
             margin:0 10px 0 5px;
             font-size:0.9em;
         }
         &:hover {
-            background-color: darken($theme-color, 20%);
-            border-color: darken($theme-color, 20%);
+            background-color: #fff;
+            color:$theme-color;
             i {
-                color: darken($theme-color, 20%);
+                color: #fff;
+                background-color: $theme-color;
             }
         }
     }
@@ -75,19 +74,24 @@
 
 .social-share {
     margin-top: 40px;
-}
-.social-share a {
-    display: inline-block;
-    margin: 5px;
-    background-color: #50a02f;
-    color: #fff;
-    font-size: 20px;
-    line-height: 40px;
-    width: 40px;
-    text-align: center;
-}
-.social-share a:hover {
-    background-color: #222;
+    a {
+        display: inline-block;
+        margin: 5px;
+        background-color: #50a02f;
+        color: #fff;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        border:2px solid $theme-color;
+        i {
+            display:inline-block;
+            line-height:36px;
+        }
+        &:hover {
+            background-color: #fff;
+            color: $theme-color;
+        }
+    }
 }
 
 .contact-form input,

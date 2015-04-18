@@ -1,28 +1,208 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
+    
     <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
-        {% if post.lastmod == null %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        {% else %}
-        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-        {% endif %}
+        <loc>http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</loc>
+        
+        <lastmod>2015-04-08T00:00:00+05:30</lastmod>
+        
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    {% endfor %}
-    {% for page in site.pages %}
-    {% if page.layout != null %}
+    
     <url>
-        <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-        <lastmod>{{ site.lastmod | date_to_xmlschema }}</lastmod>
+        <loc>http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</loc>
+        
+        <lastmod>2015-04-05T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</loc>
+        
+        <lastmod>2015-01-23T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/pixi-website-layout-design/</loc>
+        
+        <lastmod>2015-01-05T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</loc>
+        
+        <lastmod>2014-12-21T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/simpi-website-layout/</loc>
+        
+        <lastmod>2014-12-09T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</loc>
+        
+        <lastmod>2014-10-12T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/media-manager-web-application/</loc>
+        
+        <lastmod>2014-09-13T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/arka-roy-website/</loc>
+        
+        <lastmod>2014-08-23T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/creocraft-ventures-website/</loc>
+        
+        <lastmod>2014-08-06T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</loc>
+        
+        <lastmod>2013-10-19T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/advantages-html5/</loc>
+        
+        <lastmod>2013-08-16T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</loc>
+        
+        <lastmod>2013-07-23T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</loc>
+        
+        <lastmod>2012-04-10T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/arena-animation-website/</loc>
+        
+        <lastmod>2012-03-21T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/404.html</loc>
+        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
-    {% endif %}
-    {% endfor %}
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/about/</loc>
+        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/</loc>
+        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/contact/</loc>
+        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/</loc>
+        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/portfolio/</loc>
+        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </urlset>

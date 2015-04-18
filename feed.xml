@@ -1,30 +1,880 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts %}
+    <title>Arka Roy</title>
+    <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
+    <link>http://www.arkaroy.net/</link>
+    <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 18 Apr 2015 16:16:49 +0530</pubDate>
+    <lastBuildDate>Sat, 18 Apr 2015 16:16:49 +0530</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>How to use Zaq: Codeigniter Template Parser Engine</title>
+        <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
+
+&lt;p&gt;Codeigniter, by default, comes with an optional template parser. But, unfortunately, that one does not provide sufficient pseudo markup to work with. Zaq, without doubt, is able to provide much more flexibility while building view files with pseudo markup to replace php codes.&lt;/p&gt;
+
+&lt;p&gt;Let’s take a look at Zaq’s insight and usage.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/iarkaroy/Zaq-Codeigniter-Template-Parser/archive/master.zip&quot;&gt;&lt;strong&gt;Download Zaq&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy &lt;code&gt;libraries/Zaq.php&lt;/code&gt; to your &lt;code&gt;application/libraries/&lt;/code&gt; folder&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy &lt;code&gt;config/zaq.php&lt;/code&gt; to your &lt;code&gt;application/config/&lt;/code&gt; folder.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create the folder if not exists: &lt;code&gt;application/cache&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set &lt;code&gt;application/cache&lt;/code&gt; writable.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;initialization&quot;&gt;Initialization&lt;/h2&gt;
+
+&lt;p&gt;Like other libraries in CodeIgniter, the Zaq library class is initialized in your controller using the &lt;code&gt;$this-&amp;gt;load-&amp;gt;library()&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$this-&amp;gt;load-&amp;gt;library(&#39;zaq&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or you can autoload the library in &lt;code&gt;autoload.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once loaded, the Zaq library object will be available using: &lt;code&gt;$this-&amp;gt;zaq&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;parsing-viewstemplates&quot;&gt;Parsing Views/Templates&lt;/h2&gt;
+
+&lt;p&gt;You can use the &lt;code&gt;parse()&lt;/code&gt; method to parse (or render) your views or templates. The syntax is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$this-&amp;gt;zaq-&amp;gt;parse( $view, $data = array(), $return = FALSE );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The first parameter contains the name of the view file, the second parameter contains an associative array of data to be made available in the template, and the third parameter specify whether to return the parsed string.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$data = array(
+    &#39;products&#39; =&amp;gt; array(
+        array( &#39;title&#39; =&amp;gt; &#39;Shirts&#39;, &#39;link&#39; =&amp;gt; &#39;/shirts&#39; ),
+        array( &#39;title&#39; =&amp;gt; &#39;Trousers&#39;, &#39;link&#39; =&amp;gt; &#39;/trousers&#39; ),
+        array( &#39;title&#39; =&amp;gt; &#39;Shoes&#39;, &#39;link&#39; =&amp;gt; &#39;/shoes&#39; ),
+        array( &#39;title&#39; =&amp;gt; &#39;Belts&#39;, &#39;link&#39; =&amp;gt; &#39;/belts&#39; ),
+    ),
+);
+
+$this-&amp;gt;zaq-&amp;gt;parse( &#39;products/list&#39;, $data );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There is no need to “echo” or do something with the data returned by &lt;code&gt;$this-&amp;gt;zaq-&amp;gt;parse()&lt;/code&gt;. It is automatically passed to the output class to be sent to the browser. However, if you do want the data returned instead of sent to the output class you can pass TRUE (boolean) as the third parameter:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$string = $this-&amp;gt;zaq-&amp;gt;parse(&#39;products/list&#39;, $data, TRUE);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pseudo-markup&quot;&gt;Pseudo Markup&lt;/h2&gt;
+
+&lt;p&gt;The pseudo markup of Zaq is much more cleaner than its equivalent php code. It enhance the readability and maintainability of the code. Designer will also be cheerful to work with a cleaner file.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;foreach&quot;&gt;&lt;strong&gt;foreach:&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;From the above example, we are creating a template file at &lt;code&gt;products/list.php&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+{foreach products as product}
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;{product[link]}&quot;&amp;gt;{product[title]}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+{/foreach}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The html output will be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/shirts&quot;&amp;gt;Shirts&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/trousers&quot;&amp;gt;Trousers&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/shoes&quot;&amp;gt;Shoes&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/belts&quot;&amp;gt;Belts&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To achieve the same output by php code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+&amp;lt;?php foreach ( $products as $product ) : ?&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;&amp;lt;?php echo $product[&#39;link&#39;] ; ?&amp;gt;&quot;&amp;gt;&amp;lt;?php echo $product[&#39;title&#39;] ; ?&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;?php endforeach ; ?&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Use foreach for associative array&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+{foreach options as item = value}
+    &amp;lt;li&amp;gt;{item} =&amp;gt; {value}&amp;lt;/li&amp;gt;
+{/foreach}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ifelseifelse&quot;&gt;&lt;strong&gt;if/elseif/else:&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;{if product[active]}
+    ... do something ...
+{elif product[published]}
+    ... some other thing ...
+{/if}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;echo&quot;&gt;&lt;strong&gt;echo:&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;All variables and methods will be automatically preceded by &lt;code&gt;echo&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{somevar}
+&amp;lt;?php echo $somevar ; ?&amp;gt;
+
+{some_array[assoc_key]}
+&amp;lt;?php echo $some_array[&#39;assoc_key&#39;] ; ?&amp;gt;
+
+{another_array[$key]}
+&amp;lt;?php echo $another_array[$key] ; ?&amp;gt;
+
+{date(&#39;Y-m-d H:i:s&#39;, now)}
+&amp;lt;?php echo date ( &#39;Y-m-d H:i:s&#39; , $now ) ; ?&amp;gt;
+
+{time()}
+&amp;lt;?php echo time ( ) ; ?&amp;gt;
+
+{fname . lname}
+&amp;lt;?php echo $fname . $lname ; ?&amp;gt;
+
+{books-&amp;gt;get_by_author(author)-&amp;gt;first()-&amp;gt;title}
+&amp;lt;?php echo $books -&amp;gt; get_by_author( $author ) -&amp;gt; first() -&amp;gt; title ; ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;constants&quot;&gt;&lt;strong&gt;constants:&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;To use constants, precede the constant with &lt;code&gt;#&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{if defined(&#39;APP_VERSION&#39;) &amp;amp;&amp;amp; #APP_VERSION &amp;gt; 2.0}
+    ... do something ...
+{/if}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-zaq-works&quot;&gt;How Zaq Works&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Parse template and convert pseudo-markup to valid php code.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Store the code in a temporary file in its cache folder (configurable).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Load view from the temporary folder.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Delete the temporary file (configurable).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;The configuration file, &lt;code&gt;zaq.php&lt;/code&gt;, should be located in &lt;code&gt;application/config/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are two configuration settings.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$config[&#39;cache_dir&#39;] = APPPATH . &#39;cache/zaq&#39;;
+
+$config[&#39;enable_cache&#39;] = TRUE;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;cache_dir&lt;/code&gt; setting tells Zaq where to store the temporary files.&lt;/p&gt;
+
+&lt;p&gt;If &lt;code&gt;enable_cache&lt;/code&gt; setting is set to &lt;code&gt;TRUE&lt;/code&gt;, Zaq will keep the temporary files and will skip the parsing process next time if the parsed file is newer than the view file.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;helper-methods&quot;&gt;Helper Methods&lt;/h2&gt;
+
+&lt;p&gt;There are several helper methods to ease the application development a bit more.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;set_delimiter ( [ $left_delimiter = &#39;{&#39; [ , $right_delimiter = &#39;}&#39; ] ] )&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Sets the delimiters (opening and closing) for a pseudo-markup “tag” in a template.&lt;/p&gt;
+
+&lt;p&gt;Parameters:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;$left_delimiter&lt;/code&gt; (String) - Left delimiter&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$right_delimiter&lt;/code&gt; (String) - Right delimiter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Return: void&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;add_exception ( $val )&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Add exception to list of pseudo-markups.&lt;/p&gt;
+
+&lt;p&gt;Parameters:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;$val&lt;/code&gt; (String) - The string to skip parsing (without delimiters)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Return: void&lt;/p&gt;
+
+&lt;p&gt;By default, &lt;code&gt;elapsed_time&lt;/code&gt; and &lt;code&gt;memory_usage&lt;/code&gt; have been added to the list of exceptions as these are Codeigniter’s default pseudo-markup tag.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Apr 2015 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</guid>
+        
+        
+        <category>blog</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Zaq: Codeigniter Template Parser Engine</title>
+        <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
+
+&lt;p&gt;Codeigniter, by default, comes with an optional template parser. But, unfortunately, that one does not provide sufficient pseudo markup to work with. Zaq, without doubt, is able to provide much more flexibility while building view files with pseudo markup to replace php codes.&lt;/p&gt;
+
+&lt;p&gt;Let’s take a look at Zaq’s insight and usage.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/iarkaroy/Zaq-Codeigniter-Template-Parser/archive/master.zip&quot;&gt;&lt;strong&gt;Download Zaq&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy &lt;code&gt;libraries/Zaq.php&lt;/code&gt; to your &lt;code&gt;application/libraries/&lt;/code&gt; folder&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy &lt;code&gt;config/zaq.php&lt;/code&gt; to your &lt;code&gt;application/config/&lt;/code&gt; folder.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create the folder if not exists: &lt;code&gt;application/cache&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set &lt;code&gt;application/cache&lt;/code&gt; writable.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;initialization&quot;&gt;Initialization&lt;/h2&gt;
+
+&lt;p&gt;Like other libraries in CodeIgniter, the Zaq library class is initialized in your controller using the &lt;code&gt;$this-&amp;gt;load-&amp;gt;library()&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$this-&amp;gt;load-&amp;gt;library(&#39;zaq&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or you can autoload the library in &lt;code&gt;autoload.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once loaded, the Zaq library object will be available using: &lt;code&gt;$this-&amp;gt;zaq&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;For usage instructions and more, visit &lt;a href=&quot;http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/&quot;&gt;How to use Zaq: Codeigniter Template Parser Engine&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Apr 2015 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>DesignStudio: Flat Website Layout</title>
+        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/designstudio-flat-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 Jan 2015 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>Pixi: Website Layout</title>
+        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/pixi-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/pixi-website-layout-design/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/pixi-website-layout-design/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>15 Best Bootstrap Alternatives for Web Developers</title>
+        <description>&lt;p&gt;You have probably heard a lot about Bootstrap (aka Twiter Bootstrap). With this framework you can build a well structured, maintainable and up-gradable website. It also helps you save much on your time because there are plenty of readily available elements that you can use.&lt;/p&gt;
+
+&lt;p&gt;Choosing the right framework that is the perfect fit for your projects could be a little bit overwhelming – there are a lot to choose from. Perhaps, you want to go with popular choices like &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; or &lt;a href=&quot;http://foundation.zurb.com/&quot;&gt;Foundation&lt;/a&gt;, but if your website is going to be a fairly simple one, you won’t be needing most of the building blocks and materials included in the default package.&lt;/p&gt;
+
+&lt;p&gt;The good news is that there are a handful of alternatives that are much leaner than Bootstrap or Foundation. Most of these frameworks ship with just the right amount of styles and components to help you get started, while allowing you to be able to extend them in the direction you want for your project.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;skeletonhttpgetskeletoncom&quot;&gt;&lt;a href=&quot;http://getskeleton.com/&quot;&gt;Skeleton&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-skeleton.jpg&quot; alt=&quot;Skeleton&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Skeleton provides eventually obtained a face lift. It’s an overall renovation from the ground up, and yet it is still as light as it used to be. The new Skeleton grid system now adopts mobile-first philosophy, which ensures that the layout takes center stage regardless of how small the device screen is.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;zimithttpfirezenkgithubiozimit&quot;&gt;&lt;a href=&quot;http://firezenk.github.io/zimit/&quot;&gt;Zimit&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-zimit.jpg&quot; alt=&quot;Zimit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Zimit is a very lightweight HTML5 framework for prototyping responsive web site designs for web developers. It’s based on the LESS CSS pre-processor and provides a framework designed for scalability and code that’s easy to read and understand. It supports all modern web browsers and compiled it’s only 88kb in total file size.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;inkhttpinksapopt&quot;&gt;&lt;a href=&quot;http://ink.sapo.pt/&quot;&gt;Ink&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-ink.jpg&quot; alt=&quot;Ink&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ink is an interface kit for the rapid development of web interfaces that aims to be easy to use and expand upon. It’s also based on LESS and offers a fluid grid and other responsive development features for creating both large and small website projects. InK’s primary differentiator is how it handles layout, allowing flexibility in how blocks fall within the grid.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cardinalcsshttpcardinalcsscom&quot;&gt;&lt;a href=&quot;http://cardinalcss.com/&quot;&gt;CardinalCSS&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-cardinalcss.jpg&quot; alt=&quot;CardinalCSS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;CardinalCSS is often a CSS composition designed with the target effectiveness, readability and many significantly maintainability. CardinalCSS explores some current approaches including mobile-first pertaining to framing up the grid; along with CSS Field Product of which lets you very easily establish element wider along with top.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;concisecsshttpconcisecsscom&quot;&gt;&lt;a href=&quot;http://concisecss.com/&quot;&gt;ConciseCSS&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-concisecss.jpg&quot; alt=&quot;ConciseCSS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ConciseCSS is usually a CSS platform – devoid of the bloat. This can be a slender platform built together with Sass, MUCH LESS, and Stylus which often paves the golden path to CSS maintainability. But, if you desire simple straightforward vanilla CSS, you can have that will likewise.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;purehttppurecssio&quot;&gt;&lt;a href=&quot;http://purecss.io/&quot;&gt;Pure&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-purecss.jpg&quot; alt=&quot;Pure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are planning to build a web app that works both on desktop and mobile, then you should consider of using Pure from Yahoo. Pure has much better performance when it comes to mobile devices than Bootstrap. As its name suggests, Pure comes as a pure CSS framework only.  Build on top of Normalize.css, Pure has an extremely small file size with just 4.5KB (minified and gzip).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;powertocsshttppowertowebcompowertocss&quot;&gt;&lt;a href=&quot;http://powertoweb.com/powertocss/&quot;&gt;PowertoCSS&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-powertocss.jpg&quot; alt=&quot;PowertoCSS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PowertoCSS is usually light in weight as well as a reliable frontend framework. Course bands which can be utilized to construct the particular grid along with use styles are usually quick and easy to not forget button. It’s also possible to create your personal design. Brain to the site their StarterKit to get going.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;furtivehttpfurtiveco&quot;&gt;&lt;a href=&quot;http://furtive.co/&quot;&gt;Furtive&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-furtive.jpg&quot; alt=&quot;Furtive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Furtive can be a mobile-first CSS structure built throughout the cutting-edge web specifications including the employment of Flexbox to the grid and also rem model intended for dimensions factors (including font size). Furtive holds a little CSS footprint by means of not supporting elderly browsers (World Wide Web Explorer) simply because they involve a few CSS hacking. For this reason Furtive can be a great structure should you be creating an internet site in the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;uikithttpgetuikitcom&quot;&gt;&lt;a href=&quot;http://getuikit.com/&quot;&gt;UiKit&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-uikit.jpg&quot; alt=&quot;UiKit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;UIkit is a free, lightweight and modular front-end framework. Developed with LESS, UIkit has a well-structured, expandable and maintainable code. It also offers a grid system which is responsive, fluid and nestable. With UIkit you can build navigation, buttons, modals, dropdown and more responsively. Its comprehensive documentation will make you easier to get started with UIkit.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;basscsshttpwwwbasscsscom&quot;&gt;&lt;a href=&quot;http://www.basscss.com/&quot;&gt;BassCSS&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-basscss.jpg&quot; alt=&quot;BassCSS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;BassCSS provides a lightweight group of starting factor designs, utilities, along with design along with shade designs, inside modular variety for developing a responsive world-wide-web request. Your SCSS files are generally integrated to be able to customize the type simply. You possibly can play together with typography, whitened space, breakpoints.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;muellerhttpmuellergridsystemcom&quot;&gt;&lt;a href=&quot;http://muellergridsystem.com/&quot;&gt;Mueller&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-mueller.jpg&quot; alt=&quot;Mueller&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mueller is a modular sensitive grid technique built over Sass and also Compass. Using Mueller, you are able to assemble the actual grid sometimes by building courses right to the actual HTML aspects, or perhaps in case you like your current HTML aspects for being well put together and also clean, when using the grid() perform. Mueller grid may be used in tandem using the Masonry JavaScript selection to manufacture a Pinterest-like design.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;html5-boilerplatehttphtml5boilerplatecom&quot;&gt;&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-html5boilerplate.jpg&quot; alt=&quot;HTML5 Boilerplate&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;HTML5 Boilerplate isn’t really a framework but rather it is a professional front-end template to give you a head start building a robust and adaptable web app. Boilerplate comes baked with Modernizr, Normalize.css and jQuery to help you create pages that work across browsers and can adapt to browsers that don’t offer support for certain features.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tuktukhttptuktuktapquocom&quot;&gt;&lt;a href=&quot;http://tuktuk.tapquo.com/&quot;&gt;Tuktuk&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-tuktuk.jpg&quot; alt=&quot;Tuktuk&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tuktuk is usually a really exclusive identify for a platform. When compared with Bootstrap or Groundwork, Tuktuk is significantly light since it only comes with simply the correct amount of elements to construct a presentable web site as well as to the grid system, fundamental design pertaining to typography, dining tables, and also some USER INTERFACE such as navbar and also modals.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;basehttpmatthewhartmangithubiobase&quot;&gt;&lt;a href=&quot;http://matthewhartman.github.io/base/&quot;&gt;Base&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-base.jpg&quot; alt=&quot;Base&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Base was made together with MUCH LESS and Sass, and it also includes merely essentially the most important associated with factors to construct websites: the particular grid and also the standard doing your hair associated with HTML factors. Base doesn’t include JavaScript factors, however an excellent great internet browser compatibility much in order that it works in spite of IE7.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;toasthttpdanedengithubiotoast&quot;&gt;&lt;a href=&quot;http://daneden.github.io/Toast/&quot;&gt;Toast&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141221-toast.jpg&quot; alt=&quot;Toast&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Through the SCSS stylesheet is included in the package, Toast allows you to easily configure the grid class names, the gutter, and even the column-base. For example, if you want the grid to be a 9-base column instead of 12, you can do that. Toast is a minimal CSS framework with very flexible configurations catered to meet your requirements.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 21 Dec 2014 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Simpi: Website Layout</title>
+        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bit.ly/1DZKREH&quot; class=&quot;button js-force-center&quot; target=&quot;_blank&quot;&gt;Download PSD&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/simpi-minimal-flat-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Dec 2014 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/simpi-website-layout/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/simpi-website-layout/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>8 Icon Fonts to speed up Website Design Process</title>
+        <description>&lt;p&gt;Icon Fonts are nothing but fonts. But, instead of containing letters or numbers, they contain symbols and shapes. You can style them with CSS in the same way you style regular text which has made them a popular choice on the web in the process designing and developing websites and web applications.&lt;/p&gt;
+
+&lt;p&gt;They’re ideal for small, frequently used shapes such as email, envelopes, telephones, widget controls and social media logos. They also work in all modern browser.&lt;/p&gt;
+
+&lt;p&gt;Here is a list of most popular and easy-to-use icon font sets.&lt;/p&gt;
+
+&lt;h2 id=&quot;font-awesomehttpfortawesomegithubiofont-awesome&quot;&gt;&lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/&quot;&gt;Font Awesome&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-fontawesome.jpg&quot; alt=&quot;Font Awesome&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;icomoonhttpsicomoonio&quot;&gt;&lt;a href=&quot;https://icomoon.io/&quot;&gt;IcoMoon&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-icomoon.jpg&quot; alt=&quot;IcoMoon&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;foundation-icon-fonts-3httpzurbcomplaygroundfoundation-icon-fonts-3&quot;&gt;&lt;a href=&quot;http://zurb.com/playground/foundation-icon-fonts-3&quot;&gt;Foundation Icon Fonts 3&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-foundation3.jpg&quot; alt=&quot;Foundation Icon Fonts 3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;typiconshttptypiconscom&quot;&gt;&lt;a href=&quot;http://typicons.com/&quot;&gt;Typicons&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-typicons.jpg&quot; alt=&quot;Typicons&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;iconichttpsuseiconiccom&quot;&gt;&lt;a href=&quot;https://useiconic.com/&quot;&gt;Iconic&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-iconic.jpg&quot; alt=&quot;Iconic&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;we-love-icon-fontshttpweloveiconfontscom&quot;&gt;&lt;a href=&quot;http://weloveiconfonts.com/&quot;&gt;We Love Icon Fonts&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-weloveiconfonts.jpg&quot; alt=&quot;We Love Icon Fonts&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;foundation-icon-fonts-2httpzurbcomplaygroundfoundation-icons&quot;&gt;&lt;a href=&quot;http://zurb.com/playground/foundation-icons&quot;&gt;Foundation Icon Fonts 2&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-foundation2.jpg&quot; alt=&quot;Foundation Icon Fonts 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;fontellohttpfontellocom&quot;&gt;&lt;a href=&quot;http://fontello.com/&quot;&gt;Fontello&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/20141012-fontello.jpg&quot; alt=&quot;Fontello&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to create your own set of custom icon fonts, you can use online tools such as &lt;a href=&quot;http://fontello.com/&quot;&gt;Fontello&lt;/a&gt; or &lt;a href=&quot;https://icomoon.io/&quot;&gt;IcoMoon&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 12 Oct 2014 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Media Manager</title>
+        <description>&lt;p&gt;Build a web application for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a simple but efficient web application for managing and showcasing their project albums. The application, Media Manager, is able to create and manage various type of album according to the need of Creocraft. Media Manager is also able to help users to crop and re-size the images before uploading. Youtube link can also be embedded. The main website of Creocraft communicate with the application through a special channel, technically API, to showcase the albums on the website.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-04.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-05.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-06.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-07.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Sep 2014 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/media-manager-web-application/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/media-manager-web-application/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>Arka Roy</title>
+        <description>&lt;p&gt;Build the website of Arka Roy (yes, that’s me).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arka-roy-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arka-roy-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 23 Aug 2014 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/arka-roy-website/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arka-roy-website/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>Creocraft Ventures Website</title>
+        <description>&lt;p&gt;Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/creocraft-ventures-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/creocraft-ventures-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/creocraft-ventures-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Aug 2014 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/creocraft-ventures-website/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/creocraft-ventures-website/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Add Scalable Vector Graphics (SVG) to Web Page</title>
+        <description>&lt;p&gt;Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files.&lt;/p&gt;
+
+&lt;p&gt;If you want to embed your hand-crafted SVG in your web page, you can use any of the methods discussed below.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;using-object-tag&quot;&gt;Using &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt; Tag&lt;/h2&gt;
+
+&lt;p&gt;If you intend using any advanced SVG features such as CSS and scripting, the HTML5 &lt;object&gt; tag is your best option:&lt;/object&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;object type=&quot;image/svg+xml&quot; data=&quot;the-image.svg&quot;&amp;gt;Your browser does not support SVG.&amp;lt;/object&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can provide fallback text or images within the &lt;code&gt;object&lt;/code&gt; block.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;using-embed-tag&quot;&gt;Using &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; Tag&lt;/h2&gt;
+
+&lt;p&gt;Although it’s similar to &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; never has been and probably never will be part of any HTML or XHTML specification. However, it’s supported by most browsers and is often used to implement Flash plugins.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;embed type=&quot;image/svg+xml&quot; src=&quot;the-image.svg&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;using-iframe&quot;&gt;Using &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Since browsers can render SVG documents in their own right, it’s possible to load images within an &lt;code&gt;iframe&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;iframe src=&quot;the-image.svg&quot;&amp;gt;Your browser does not support iframes.&amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can provide fallback text or images within the &lt;code&gt;iframe&lt;/code&gt; block.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;embedding-inline-svg-xml&quot;&gt;Embedding Inline SVG XML&lt;/h2&gt;
+
+&lt;p&gt;An SVG image can be added as a code island directly within your HTML5 page using outer &lt;code&gt;&amp;lt;svg&amp;gt;&lt;/code&gt; tags:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+        &amp;lt;title&amp;gt;Embedded SVG&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;h1&amp;gt;Embedded SVG&amp;lt;/h1&amp;gt;
+
+        &amp;lt;!-- SVG code --&amp;gt;
+        &amp;lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 54 51.3&quot; enable-background=&quot;new 0 0 54 51.3&quot; xml:space=&quot;preserve&quot;&amp;gt;
+            &amp;lt;path fill=&quot;#FFFFFF&quot; d=&quot;M48.8,37.8L32.2,9l2.6-4.5L27,0l-7.8,4.5L21.8,9L5.2,37.8H0v9l7.8,4.5l2.6-4.5h33.2l2.6,4.5l7.8-4.5v-9H48.8z M15.6,37.8L27,18l11.4,19.8H15.6z&quot;/&amp;gt;
+        &amp;lt;/svg&amp;gt;
+
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;using-img-tag&quot;&gt;Using &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; Tag&lt;/h2&gt;
+
+&lt;p&gt;SVGs can be added to your web page like any other image:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&quot;the-image.svg&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The usual width, height, alt and other attributes can be added should you require them.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;using-a-css-background-image&quot;&gt;Using a CSS Background Image&lt;/h2&gt;
+
+&lt;p&gt;SVGs can be used as a CSS background for any element:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#bg-svg {
+    background-image: url(the-image.svg);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sat, 19 Oct 2013 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Advantages of HTML5</title>
+        <description>&lt;p&gt;HTML5 is the new definition of web designing. It has been designed to replace both HTML 4, XHTML, and the HTML DOM Level 2. HTML5 is specially designed to deliver rich content without the need for additional plugins. The current version delivers everything from animation to graphics, music to movies, and can also be used to build complicated web applications. HTML5 is also cross-platform. It is designed to work whether you are using a PC, or a Tablet, a Smartphone, or a Smart TV.&lt;/p&gt;
+
+&lt;p&gt;Lets discuss some advantages or beneficial features of HTML5.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mutuality&quot;&gt;Mutuality&lt;/h2&gt;
+
+&lt;p&gt;The developers make websites highly interactive nowadays, to keep up with the demands of the user. For this purpose, they need to incorporate fluid animations, stream video, music and Social Network site links, like those of Facebook and Twitter, into the websites. Now, with the help of HTML5, it is possible to embed video &amp;amp; audio, high quality drawings, charts &amp;amp; animation and much more rich content, without using any plug-ins or any other computer programs.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;improved-codes&quot;&gt;Improved Codes&lt;/h2&gt;
+
+&lt;p&gt;HTML5 enables web designers to use cleaner, neater code, we can remove most div tags and replace them with semantic HTML5 elements.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;improved-semantics&quot;&gt;Improved Semantics&lt;/h2&gt;
+
+&lt;p&gt;It is now easy to see which parts of the page are headers, navigators, footers, aside functions, etc and most importantly, know what their meaning and purpose is in the whole format, as the tags for these functions are more specific. By using HTML5 elements, we can increase the semantic value of the web page, as the codes are very standardized.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;elegant-forms&quot;&gt;Elegant Forms&lt;/h2&gt;
+
+&lt;p&gt;HTML5 enables designer to use fancier forms. It even makes form validation native to HTML, enables user interface enhancements and reduces need for JavaScript (but you need modern browser).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;consistency&quot;&gt;Consistency&lt;/h2&gt;
+
+&lt;p&gt;As websites adopt the new HTML5 elements, we will see greater consistency in terms of the HTML used to code a web page. This will make it easier for designers and developers to immediately understand how a web page is structured.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;improved-accessibility&quot;&gt;Improved Accessibility&lt;/h2&gt;
+
+&lt;p&gt;HTML5 and its elements enable more detailed understanding of the structure of a page and make the technologies and features of web design more accessible.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-application-development&quot;&gt;Web Application Development&lt;/h2&gt;
+
+&lt;p&gt;Many new features and standards have emerged, as part of HTML5. Once you understand the available features in the browsers today, you can utilize them in your application and keep up with the changing trends. The main objective of HTML5 is to make web application easier with easy front-ends, drag and drop tools, discussion boards, wikis and other useful elements.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;offline-application-cache&quot;&gt;Offline Application Cache&lt;/h2&gt;
+
+&lt;p&gt;While building the site, a developer can now specify the files that he would want the browser to cache. This way, if you refresh the page when you are offline, the page will still load correctly. This has several advantages like offline browsing, files loading much faster and reduced load on the server.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;user-database&quot;&gt;User Database&lt;/h2&gt;
+
+&lt;p&gt;HTML5 has two storage devices – Session Storage and Local Storage, instead of the cookies, used to track user data, which could cause disadvantages with tedious repair procedures. It is not a permanent database, but enables you to store structured data, temporarily.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;geo-location&quot;&gt;Geo-location&lt;/h2&gt;
+
+&lt;p&gt;Geo-location is used to track your location and share it with others. Your IP address, wireless network connection, the cell tower your phone is connected to, or the recent GPS hardware can all help in tracking your location. The new HTML5 Geo-location APIs make information, about your location, generated via GPS or other methods, directly available to any application with an HTML5-compatible browser.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 16 Aug 2013 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/blog/advantages-html5/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/blog/advantages-html5/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Drop Cap Letters in CSS</title>
+        <description>&lt;p&gt;Drop Cap is a traditional newspaper technique of making the first letter of a paragraph capital and take the height of three or four lines. In that way, it is easier to grab the attention of the reader and specify the start of a section.&lt;/p&gt;
+
+&lt;p&gt;Now we are going to implement that style in our css using a new CSS3 technique.&lt;/p&gt;
+
+&lt;h2 id=&quot;css-first-letter&quot;&gt;CSS First Letter&lt;/h2&gt;
+
+&lt;p&gt;CSS allows you to add a property &lt;code&gt;:first-letter&lt;/code&gt; which as you can guess allows you to style the first letter of the element.&lt;/p&gt;
+
+&lt;p&gt;Consider this paragraph:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;orem ipsum dolor sit amet, consectetur adipiscing elit. Ut in metus nec mauris egestas laoreet. Integer vehicula velit non massa suscipit at porta sem commodo. Donec nibh lectus, vulputate a aliquet quis, sollicitudin eget metus. Nullam quis tellus nibh. Praesent fermentum risus sit amet turpis eleifend dapibus. Duis tellus leo, tempor sit amet ultricies viverra, mollis at quam. Suspendisse hendrerit sagittis risus nec faucibus. Nam urna magna, porta vitae tincidunt sit amet, blandit eget diam. Vivamus a ornare augue. Vivamus sapien sem, facilisis vitae molestie eget, tempus ut augue. Sed suscipit facilisis mi, eu laoreet est gravida eu. Nulla et arcu quam, pellentesque adipiscing felis. Nam pretium augue sed sapien malesuada tempor. Nulla facilisi. Donec eu tempor mi.&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can add the drop cap style to the paragraph using &lt;code&gt;:first-letter&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;p:first-letter {
+    display:block;
+    float:left;
+    font-family:inherit;
+    font-size: 360%;
+    font-weight: bold;
+    line-height: 85%;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This css will stylize the first letter exactly how we want.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 23 Jul 2013 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Arena Animation Landing Page</title>
+        <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/arena-animation-landing-page-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/arena-animation-landing-page-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Apr 2012 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-landing-page/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
+      <item>
+        <title>Arena Animation Website</title>
+        <description>&lt;p&gt;Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/arena-animation-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/arena-animation-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/image/arena-animation-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Mar 2012 00:00:00 +0530</pubDate>
+        <link>http://www.arkaroy.net/portfolio/arena-animation-website/</link>
+        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-website/</guid>
+        
+        
+        <category>portfolio</category>
+        
+      </item>
+    
   </channel>
 </rss>

@@ -1,4 +1,1 @@
----
-layout: null
----
 Sitemap: http://www.arkaroy.net/sitemap.xml

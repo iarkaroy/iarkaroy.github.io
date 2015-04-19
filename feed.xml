@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Arka Roy</title>
-    <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
-    <link>http://www.arkaroy.net/</link>
-    <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 18 Apr 2015 16:16:49 +0530</pubDate>
-    <lastBuildDate>Sat, 18 Apr 2015 16:16:49 +0530</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>How to use Zaq: Codeigniter Template Parser Engine</title>
-        <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Arka Roy</title>
+        <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
+        <link>http://www.arkaroy.net/</link>
+        <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml" />
+        <pubDate>Sun, 19 Apr 2015 19:24:11 +0530</pubDate>
+        <lastBuildDate>Sun, 19 Apr 2015 19:24:11 +0530</lastBuildDate>
+        
+            <item>
+                <title>How to use Zaq: Codeigniter Template Parser Engine</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
 
 &lt;p&gt;Codeigniter, by default, comes with an optional template parser. But, unfortunately, that one does not provide sufficient pseudo markup to work with. Zaq, without doubt, is able to provide much more flexibility while building view files with pseudo markup to replace php codes.&lt;/p&gt;
 
@@ -252,18 +252,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;By default, &lt;code&gt;elapsed_time&lt;/code&gt; and &lt;code&gt;memory_usage&lt;/code&gt; have been added to the list of exceptions as these are Codeigniter’s default pseudo-markup tag.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 08 Apr 2015 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</guid>
+                <pubDate>Wed, 08 Apr 2015 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
         
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Zaq: Codeigniter Template Parser Engine</title>
-        <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
+            <item>
+                <title>Zaq: Codeigniter Template Parser Engine</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
 
 &lt;p&gt;Codeigniter, by default, comes with an optional template parser. But, unfortunately, that one does not provide sufficient pseudo markup to work with. Zaq, without doubt, is able to provide much more flexibility while building view files with pseudo markup to replace php codes.&lt;/p&gt;
 
@@ -308,48 +309,51 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;For usage instructions and more, visit &lt;a href=&quot;http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/&quot;&gt;How to use Zaq: Codeigniter Template Parser Engine&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 05 Apr 2015 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</guid>
+                <pubDate>Sun, 05 Apr 2015 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>DesignStudio: Flat Website Layout</title>
-        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+            <item>
+                <title>DesignStudio: Flat Website Layout</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/designstudio-flat-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 23 Jan 2015 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</guid>
+                <pubDate>Fri, 23 Jan 2015 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>Pixi: Website Layout</title>
-        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+            <item>
+                <title>Pixi: Website Layout</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/pixi-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 05 Jan 2015 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/pixi-website-layout-design/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/pixi-website-layout-design/</guid>
+                <pubDate>Mon, 05 Jan 2015 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/pixi-website-layout-design/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/pixi-website-layout-design/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>15 Best Bootstrap Alternatives for Web Developers</title>
-        <description>&lt;p&gt;You have probably heard a lot about Bootstrap (aka Twiter Bootstrap). With this framework you can build a well structured, maintainable and up-gradable website. It also helps you save much on your time because there are plenty of readily available elements that you can use.&lt;/p&gt;
+            <item>
+                <title>15 Best Bootstrap Alternatives for Web Developers</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;You have probably heard a lot about Bootstrap (aka Twiter Bootstrap). With this framework you can build a well structured, maintainable and up-gradable website. It also helps you save much on your time because there are plenty of readily available elements that you can use.&lt;/p&gt;
 
 &lt;p&gt;Choosing the right framework that is the perfect fit for your projects could be a little bit overwhelming – there are a lot to choose from. Perhaps, you want to go with popular choices like &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; or &lt;a href=&quot;http://foundation.zurb.com/&quot;&gt;Foundation&lt;/a&gt;, but if your website is going to be a fairly simple one, you won’t be needing most of the building blocks and materials included in the default package.&lt;/p&gt;
 
@@ -475,35 +479,37 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;Through the SCSS stylesheet is included in the package, Toast allows you to easily configure the grid class names, the gutter, and even the column-base. For example, if you want the grid to be a 9-base column instead of 12, you can do that. Toast is a minimal CSS framework with very flexible configurations catered to meet your requirements.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 21 Dec 2014 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</guid>
+                <pubDate>Sun, 21 Dec 2014 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
         
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Simpi: Website Layout</title>
-        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+            <item>
+                <title>Simpi: Website Layout</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 &lt;br /&gt;&lt;br /&gt;
 &lt;a href=&quot;http://bit.ly/1DZKREH&quot; class=&quot;button js-force-center&quot; target=&quot;_blank&quot;&gt;Download PSD&lt;/a&gt;
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/simpi-minimal-flat-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 09 Dec 2014 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/simpi-website-layout/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/simpi-website-layout/</guid>
+                <pubDate>Tue, 09 Dec 2014 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/simpi-website-layout/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/simpi-website-layout/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>8 Icon Fonts to speed up Website Design Process</title>
-        <description>&lt;p&gt;Icon Fonts are nothing but fonts. But, instead of containing letters or numbers, they contain symbols and shapes. You can style them with CSS in the same way you style regular text which has made them a popular choice on the web in the process designing and developing websites and web applications.&lt;/p&gt;
+            <item>
+                <title>8 Icon Fonts to speed up Website Design Process</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Icon Fonts are nothing but fonts. But, instead of containing letters or numbers, they contain symbols and shapes. You can style them with CSS in the same way you style regular text which has made them a popular choice on the web in the process designing and developing websites and web applications.&lt;/p&gt;
 
 &lt;p&gt;They’re ideal for small, frequently used shapes such as email, envelopes, telephones, widget controls and social media logos. They also work in all modern browser.&lt;/p&gt;
 
@@ -543,18 +549,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;If you want to create your own set of custom icon fonts, you can use online tools such as &lt;a href=&quot;http://fontello.com/&quot;&gt;Fontello&lt;/a&gt; or &lt;a href=&quot;https://icomoon.io/&quot;&gt;IcoMoon&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 12 Oct 2014 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</guid>
+                <pubDate>Sun, 12 Oct 2014 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
         
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Media Manager</title>
-        <description>&lt;p&gt;Build a web application for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a simple but efficient web application for managing and showcasing their project albums. The application, Media Manager, is able to create and manage various type of album according to the need of Creocraft. Media Manager is also able to help users to crop and re-size the images before uploading. Youtube link can also be embedded. The main website of Creocraft communicate with the application through a special channel, technically API, to showcase the albums on the website.&lt;/p&gt;
+            <item>
+                <title>Media Manager</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Build a web application for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a simple but efficient web application for managing and showcasing their project albums. The application, Media Manager, is able to create and manage various type of album according to the need of Creocraft. Media Manager is also able to help users to crop and re-size the images before uploading. Youtube link can also be embedded. The main website of Creocraft communicate with the application through a special channel, technically API, to showcase the albums on the website.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -584,18 +591,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-07.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 13 Sep 2014 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/media-manager-web-application/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/media-manager-web-application/</guid>
+                <pubDate>Sat, 13 Sep 2014 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/media-manager-web-application/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/media-manager-web-application/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>Arka Roy</title>
-        <description>&lt;p&gt;Build the website of Arka Roy (yes, that’s me).&lt;/p&gt;
+            <item>
+                <title>Arka Roy</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Build the website of Arka Roy (yes, that’s me).&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -605,18 +613,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/arka-roy-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 23 Aug 2014 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/arka-roy-website/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arka-roy-website/</guid>
+                <pubDate>Sat, 23 Aug 2014 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/arka-roy-website/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arka-roy-website/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>Creocraft Ventures Website</title>
-        <description>&lt;p&gt;Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.
+            <item>
+                <title>Creocraft Ventures Website</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/creocraft-ventures-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
 &lt;br /&gt;&lt;br /&gt;
@@ -624,18 +633,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/creocraft-ventures-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 06 Aug 2014 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/creocraft-ventures-website/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/creocraft-ventures-website/</guid>
+                <pubDate>Wed, 06 Aug 2014 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/creocraft-ventures-website/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/creocraft-ventures-website/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>How to Add Scalable Vector Graphics (SVG) to Web Page</title>
-        <description>&lt;p&gt;Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files.&lt;/p&gt;
+            <item>
+                <title>How to Add Scalable Vector Graphics (SVG) to Web Page</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files.&lt;/p&gt;
 
 &lt;p&gt;If you want to embed your hand-crafted SVG in your web page, you can use any of the methods discussed below.&lt;/p&gt;
 
@@ -716,18 +726,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-        <pubDate>Sat, 19 Oct 2013 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</guid>
+                <pubDate>Sat, 19 Oct 2013 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
         
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Advantages of HTML5</title>
-        <description>&lt;p&gt;HTML5 is the new definition of web designing. It has been designed to replace both HTML 4, XHTML, and the HTML DOM Level 2. HTML5 is specially designed to deliver rich content without the need for additional plugins. The current version delivers everything from animation to graphics, music to movies, and can also be used to build complicated web applications. HTML5 is also cross-platform. It is designed to work whether you are using a PC, or a Tablet, a Smartphone, or a Smart TV.&lt;/p&gt;
+            <item>
+                <title>Advantages of HTML5</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;HTML5 is the new definition of web designing. It has been designed to replace both HTML 4, XHTML, and the HTML DOM Level 2. HTML5 is specially designed to deliver rich content without the need for additional plugins. The current version delivers everything from animation to graphics, music to movies, and can also be used to build complicated web applications. HTML5 is also cross-platform. It is designed to work whether you are using a PC, or a Tablet, a Smartphone, or a Smart TV.&lt;/p&gt;
 
 &lt;p&gt;Lets discuss some advantages or beneficial features of HTML5.&lt;/p&gt;
 
@@ -791,18 +802,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;Geo-location is used to track your location and share it with others. Your IP address, wireless network connection, the cell tower your phone is connected to, or the recent GPS hardware can all help in tracking your location. The new HTML5 Geo-location APIs make information, about your location, generated via GPS or other methods, directly available to any application with an HTML5-compatible browser.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 16 Aug 2013 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/blog/advantages-html5/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/blog/advantages-html5/</guid>
+                <pubDate>Fri, 16 Aug 2013 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/advantages-html5/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/advantages-html5/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
         
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Drop Cap Letters in CSS</title>
-        <description>&lt;p&gt;Drop Cap is a traditional newspaper technique of making the first letter of a paragraph capital and take the height of three or four lines. In that way, it is easier to grab the attention of the reader and specify the start of a section.&lt;/p&gt;
+            <item>
+                <title>Drop Cap Letters in CSS</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Drop Cap is a traditional newspaper technique of making the first letter of a paragraph capital and take the height of three or four lines. In that way, it is easier to grab the attention of the reader and specify the start of a section.&lt;/p&gt;
 
 &lt;p&gt;Now we are going to implement that style in our css using a new CSS3 technique.&lt;/p&gt;
 
@@ -831,35 +843,37 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;This css will stylize the first letter exactly how we want.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 23 Jul 2013 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</guid>
+                <pubDate>Tue, 23 Jul 2013 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
         
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Arena Animation Landing Page</title>
-        <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.
+            <item>
+                <title>Arena Animation Landing Page</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/arena-animation-landing-page-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/arena-animation-landing-page-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 10 Apr 2012 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-landing-page/</guid>
+                <pubDate>Tue, 10 Apr 2012 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-landing-page/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-      <item>
-        <title>Arena Animation Website</title>
-        <description>&lt;p&gt;Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.
+            <item>
+                <title>Arena Animation Website</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/arena-animation-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
 &lt;br /&gt;&lt;br /&gt;
@@ -867,14 +881,14 @@ $config[&#39;enable_cache&#39;] = TRUE;
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/arena-animation-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 21 Mar 2012 00:00:00 +0530</pubDate>
-        <link>http://www.arkaroy.net/portfolio/arena-animation-website/</link>
-        <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-website/</guid>
+                <pubDate>Wed, 21 Mar 2012 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/arena-animation-website/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-website/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
-        
-        <category>portfolio</category>
-        
-      </item>
-    
-  </channel>
+    </channel>
 </rss>

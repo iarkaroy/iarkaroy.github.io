@@ -138,20 +138,13 @@
     
     
     
-    <url>
-        <loc>http://www.arkaroy.net/404.html</loc>
-        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
     
     
     
     
     <url>
         <loc>http://www.arkaroy.net/about/</loc>
-        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <lastmod>2015-04-21T00:31:52+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -160,7 +153,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/blog/</loc>
-        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <lastmod>2015-04-21T00:31:52+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -169,7 +162,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/contact/</loc>
-        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <lastmod>2015-04-21T00:31:52+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -182,7 +175,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/</loc>
-        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <lastmod>2015-04-21T00:31:52+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -191,7 +184,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/portfolio/</loc>
-        <lastmod>2015-04-15T23:12:14+05:30</lastmod>
+        <lastmod>2015-04-21T00:31:52+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

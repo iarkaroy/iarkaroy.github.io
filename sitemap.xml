@@ -119,6 +119,15 @@
     </url>
     
     <url>
+        <loc>http://www.arkaroy.net/portfolio/student-resource-manager-web-application/</loc>
+        
+        <lastmod>2012-05-23T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</loc>
         
         <lastmod>2012-04-10T00:00:00+05:30</lastmod>
@@ -144,25 +153,18 @@
     
     <url>
         <loc>http://www.arkaroy.net/about/</loc>
-        <lastmod>2015-04-21T20:33:48+05:30</lastmod>
+        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     
-    
-    <url>
-        <loc>http://www.arkaroy.net/blog/</loc>
-        <lastmod>2015-04-21T20:33:48+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
     
     
     
     <url>
         <loc>http://www.arkaroy.net/contact/</loc>
-        <lastmod>2015-04-21T20:33:48+05:30</lastmod>
+        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -175,7 +177,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/</loc>
-        <lastmod>2015-04-21T20:33:48+05:30</lastmod>
+        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -184,7 +186,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/portfolio/</loc>
-        <lastmod>2015-04-21T20:33:48+05:30</lastmod>
+        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -196,6 +198,15 @@
     
     
     
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/</loc>
+        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
     
     
 </urlset>

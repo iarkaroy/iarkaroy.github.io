@@ -5,8 +5,8 @@
         <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
         <link>http://www.arkaroy.net/</link>
         <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Tue, 21 Apr 2015 20:33:48 +0530</pubDate>
-        <lastBuildDate>Tue, 21 Apr 2015 20:33:48 +0530</lastBuildDate>
+        <pubDate>Sat, 25 Apr 2015 20:33:02 +0530</pubDate>
+        <lastBuildDate>Sat, 25 Apr 2015 20:33:02 +0530</lastBuildDate>
         
             <item>
                 <title>How to use Zaq: Codeigniter Template Parser Engine</title>
@@ -625,13 +625,27 @@ $config[&#39;enable_cache&#39;] = TRUE;
             <item>
                 <title>Creocraft Ventures Website</title>
                 <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/creocraft-ventures-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/creocraft-ventures-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/creocraft-ventures-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+                <description>&lt;p&gt;Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/creocraft-ventures-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/creocraft-ventures-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/creocraft-ventures-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/creocraft-ventures-website-04.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/creocraft-ventures-website-05.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
                 <pubDate>Wed, 06 Aug 2014 00:00:00 +0530</pubDate>
                 <link>http://www.arkaroy.net/portfolio/creocraft-ventures-website/</link>
@@ -824,7 +838,7 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;Consider this paragraph:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;orem ipsum dolor sit amet, consectetur adipiscing elit. Ut in metus nec mauris egestas laoreet. Integer vehicula velit non massa suscipit at porta sem commodo. Donec nibh lectus, vulputate a aliquet quis, sollicitudin eget metus. Nullam quis tellus nibh. Praesent fermentum risus sit amet turpis eleifend dapibus. Duis tellus leo, tempor sit amet ultricies viverra, mollis at quam. Suspendisse hendrerit sagittis risus nec faucibus. Nam urna magna, porta vitae tincidunt sit amet, blandit eget diam. Vivamus a ornare augue. Vivamus sapien sem, facilisis vitae molestie eget, tempus ut augue. Sed suscipit facilisis mi, eu laoreet est gravida eu. Nulla et arcu quam, pellentesque adipiscing felis. Nam pretium augue sed sapien malesuada tempor. Nulla facilisi. Donec eu tempor mi.&amp;lt;/p&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in metus nec mauris egestas laoreet. Integer vehicula velit non massa suscipit at porta sem commodo. Donec nibh lectus, vulputate a aliquet quis, sollicitudin eget metus. Nullam quis tellus nibh. Praesent fermentum risus sit amet turpis eleifend dapibus. Duis tellus leo, tempor sit amet ultricies viverra, mollis at quam. Suspendisse hendrerit sagittis risus nec faucibus. Nam urna magna, porta vitae tincidunt sit amet, blandit eget diam. Vivamus a ornare augue. Vivamus sapien sem, facilisis vitae molestie eget, tempus ut augue. Sed suscipit facilisis mi, eu laoreet est gravida eu. Nulla et arcu quam, pellentesque adipiscing felis. Nam pretium augue sed sapien malesuada tempor. Nulla facilisi. Donec eu tempor mi.&amp;lt;/p&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;We can add the drop cap style to the paragraph using &lt;code&gt;:first-letter&lt;/code&gt;&lt;/p&gt;
@@ -853,6 +867,24 @@ $config[&#39;enable_cache&#39;] = TRUE;
             </item>
         
             <item>
+                <title>Student Resource Manager</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;Build a web application for Arena Animation to fulfill the need of a efficient but easy-to-use web-based platform for managing students and the resources allocated for them.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/student-resource-manager-web-app-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+                <pubDate>Wed, 23 May 2012 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/student-resource-manager-web-application/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/student-resource-manager-web-application/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
+        
+            <item>
                 <title>Arena Animation Landing Page</title>
                 <dc:creator>Arka Roy</dc:creator>
                 <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.
@@ -873,13 +905,35 @@ $config[&#39;enable_cache&#39;] = TRUE;
             <item>
                 <title>Arena Animation Website</title>
                 <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/arena-animation-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/arena-animation-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/arena-animation-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+                <description>&lt;p&gt;Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-04.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-05.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-06.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-07.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
                 <pubDate>Wed, 21 Mar 2012 00:00:00 +0530</pubDate>
                 <link>http://www.arkaroy.net/portfolio/arena-animation-website/</link>

@@ -101,6 +101,24 @@
     </url>
     
     <url>
+        <loc>http://www.arkaroy.net/blog/create-file-upload-class-in-php/</loc>
+        
+        <lastmod>2013-09-29T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</loc>
+        
+        <lastmod>2013-09-17T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>http://www.arkaroy.net/blog/advantages-html5/</loc>
         
         <lastmod>2013-08-16T00:00:00+05:30</lastmod>
@@ -153,7 +171,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/about/</loc>
-        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
+        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -164,7 +182,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/contact/</loc>
-        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
+        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -177,7 +195,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/</loc>
-        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
+        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -186,7 +204,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/portfolio/</loc>
-        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
+        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -203,7 +221,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/blog/</loc>
-        <lastmod>2015-04-25T20:33:02+05:30</lastmod>
+        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

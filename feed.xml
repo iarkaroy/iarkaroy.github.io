@@ -5,8 +5,8 @@
         <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
         <link>http://www.arkaroy.net/</link>
         <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sat, 25 Apr 2015 20:33:02 +0530</pubDate>
-        <lastBuildDate>Sat, 25 Apr 2015 20:33:02 +0530</lastBuildDate>
+        <pubDate>Thu, 30 Apr 2015 20:04:36 +0530</pubDate>
+        <lastBuildDate>Thu, 30 Apr 2015 20:04:36 +0530</lastBuildDate>
         
             <item>
                 <title>How to use Zaq: Codeigniter Template Parser Engine</title>
@@ -750,6 +750,450 @@ $config[&#39;enable_cache&#39;] = TRUE;
             </item>
         
             <item>
+                <title>Create a File Upload Class in PHP</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;The basic process of providing a HTML form for uploading user submitted files to the server with PHP is fairly easy and simple. But there are some security implications that many of us are unaware of. We will be building a custom PHP class for secure file upload. This class will check the type and size of the file and rename the file in case of duplication.&lt;/p&gt;
+
+&lt;p&gt;Those who are absolutely beginner in handling file upload, are requested to take a look at &lt;a href=&quot;http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/&quot;&gt;Enhance File Upload Security with PHP&lt;/a&gt;. That article will help you to better understand file uploading from scratch.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-class&quot;&gt;The Class&lt;/h2&gt;
+
+&lt;p&gt;We will start our &lt;code&gt;Upload&lt;/code&gt; class with a blank constructor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Upload {
+    function __construct() {
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we will add some properties to our class to store some data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;protected $config = array();
+protected $current;
+protected $errors = array();
+protected $new_name;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;$config&lt;/code&gt; property holds the configurations like target directory, size limit etc. &lt;code&gt;$current&lt;/code&gt; refers to the current key of &lt;code&gt;$_FILES&lt;/code&gt; array. &lt;code&gt;$errors&lt;/code&gt; contains the errors encountered during process. &lt;code&gt;$new_name&lt;/code&gt; stores the name of the uploaded file to be set.&lt;/p&gt;
+
+&lt;h2 id=&quot;public-methods&quot;&gt;Public Methods&lt;/h2&gt;
+
+&lt;p&gt;Now we are going to define some public methods to set up some configuration settings.&lt;/p&gt;
+
+&lt;p&gt;But first, we need to implement a method for handling errors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function error($msg = null) {
+    if ($msg) {
+        $this-&amp;gt;errors[] = $msg;
+        return $this;
+    } else {
+        return $this-&amp;gt;errors;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This method will store error messages in the &lt;code&gt;$errors&lt;/code&gt;. This method will work as both a getter and setter.&lt;/p&gt;
+
+&lt;h3 id=&quot;extensions&quot;&gt;Extensions&lt;/h3&gt;
+
+&lt;p&gt;Of course you want to prevent the users from uploading specified types of files. Here is the method for allowing or disallowing file types.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function setAllowedExtensions($extensions) {
+    if (is_array($extensions)) {
+        $this-&amp;gt;config[&#39;allowed_extensions&#39;] = $extensions;
+    } else {
+        $extensions = explode(&#39;,&#39;, $extensions);
+        $this-&amp;gt;config[&#39;allowed_extensions&#39;] = array();
+        foreach ($extensions as $ext) {
+            $this-&amp;gt;config[&#39;allowed_extensions&#39;][] = trim($ext);
+        }
+    }
+    return $this;
+}
+
+public function setDisallowedExtensions($extensions) {
+    if (is_array($extensions)) {
+        $this-&amp;gt;config[&#39;disallowed_extensions&#39;] = $extensions;
+    } else {
+        $extensions = explode(&#39;,&#39;, $extensions);
+        $this-&amp;gt;config[&#39;disallowed_extensions&#39;] = array();
+        foreach ($extensions as $ext) {
+            $this-&amp;gt;config[&#39;disallowed_extensions&#39;][] = trim($ext);
+        }
+    }
+    return $this;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The allowed extensions will be stored in &lt;code&gt;$config[&#39;allowed_extensions&#39;]&lt;/code&gt; and the disallowed extensions in &lt;code&gt;$config[&#39;disallowed_extensions&#39;]&lt;/code&gt;. You can either specify allowed file types or disallowed file types.&lt;/p&gt;
+
+&lt;h3 id=&quot;target-directory&quot;&gt;Target Directory&lt;/h3&gt;
+
+&lt;p&gt;Now its time to specify where our uploaded images will live. We should add a method to setup this setting.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function setDirectory($dir) {
+    $dir = str_replace(&#39;\\&#39;, &#39;/&#39;, $dir);
+    $dir = rtrim($dir, &#39;/&#39;);
+    $this-&amp;gt;config[&#39;directory&#39;] = $dir;
+    return $this;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;max-size&quot;&gt;Max Size&lt;/h3&gt;
+
+&lt;p&gt;Obviously we want to limit the size of the files to be uploaded. But our specified limit cannot be greater than that specified in PHP config.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function setMaxSize($size) {
+    $max_size = $this-&amp;gt;convertSizeToBytes($size);
+    $upload_max_filesize = $this-&amp;gt;convertSizeToBytes(ini_get(&#39;upload_max_filesize&#39;));
+    $this-&amp;gt;config[&#39;max_size&#39;] = ($max_size &amp;lt;= $upload_max_filesize) ? $max_size : $upload_max_filesize;
+    return $this;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will check the size limit from PHP configuration. If the specified limit is larger, it will automatically set the size from PHP config. For this method to work properly, we need to implement a helper method.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;protected function convertSizeToBytes($size) {
+    $size = trim($size);
+    $unit = strtoupper($size[strlen($size) - 1]);
+    if (in_array($unit, array(&#39;T&#39;, &#39;G&#39;, &#39;M&#39;, &#39;K&#39;, &#39;B&#39;))) {
+        switch ($unit) {
+            case &#39;T&#39;:
+                $size *= 1024;
+            case &#39;G&#39;:
+                $size *= 1024;
+            case &#39;M&#39;:
+                $size *= 1024;
+            case &#39;K&#39;:
+                $size *= 1024;
+            case &#39;B&#39;:
+                $size *= 1;
+        }
+    }
+    return $size;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;overwrite&quot;&gt;Overwrite&lt;/h3&gt;
+
+&lt;p&gt;We need provide a way to specify whether we want to overwrite files or not.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function setOverwrite($overwrite = TRUE) {
+    $this-&amp;gt;config[&#39;overwrite&#39;] = $overwrite;
+    return $this;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;methods-for-the-magic&quot;&gt;Methods for the Magic&lt;/h2&gt;
+
+&lt;p&gt;The methods mentioned till now are going to be used to set the configuration settings. For the actual file uploading process, we need to add a few more internal methods to check the settings or generate a new name for the file or upload the file etc.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Check whether the file is of allowed type
+protected function allowedExtension() {
+    $allowed = TRUE;
+    if (!isset($this-&amp;gt;config[&#39;allowed_extensions&#39;]) || !$this-&amp;gt;config[&#39;allowed_extensions&#39;]) {
+        $allowed = TRUE;
+    }
+    if (!isset($this-&amp;gt;config[&#39;disallowed_extensions&#39;]) || !$this-&amp;gt;config[&#39;disallowed_extensions&#39;]) {
+        $allowed = TRUE;
+    }
+    $ext = pathinfo($this-&amp;gt;current[&#39;name&#39;], PATHINFO_EXTENSION);
+    $ext = strtolower($ext);
+    if (isset($this-&amp;gt;config[&#39;allowed_extensions&#39;]) &amp;amp;&amp;amp; $this-&amp;gt;config[&#39;allowed_extensions&#39;]) {
+        $allowed = in_array($ext, $this-&amp;gt;config[&#39;allowed_extensions&#39;]);
+    }
+    if (isset($this-&amp;gt;config[&#39;disallowed_extensions&#39;]) &amp;amp;&amp;amp; $this-&amp;gt;config[&#39;disallowed_extensions&#39;]) {
+        $allowed = !in_array($ext, $this-&amp;gt;config[&#39;disallowed_extensions&#39;]);
+    }
+    return $allowed;
+}
+
+// Check whether the file is within size limit
+protected function allowedSize() {
+    $size = $this-&amp;gt;current[&#39;size&#39;];
+    return $size &amp;lt;= $this-&amp;gt;config[&#39;max_size&#39;];
+}
+
+// Validate the target directory
+protected function checkDirectory() {
+    if (!isset($this-&amp;gt;config[&#39;directory&#39;]) || empty($this-&amp;gt;config[&#39;directory&#39;])) {
+        return FALSE;
+    }
+    if (!is_dir($this-&amp;gt;config[&#39;directory&#39;])) {
+        mkdir($this-&amp;gt;config[&#39;directory&#39;]);
+    }
+    return is_writable($this-&amp;gt;config[&#39;directory&#39;]);
+}
+
+// Generate new name for the file to be saved
+// it will replace spaces with dashes
+// name will be lowercase
+// generate new name if file exists
+protected function setNewName() {
+    $filename = $this-&amp;gt;current[&#39;name&#39;];
+    $name = pathinfo($filename, PATHINFO_FILENAME);
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+    $name = str_replace(&#39; &#39;, &#39;-&#39;, $name);
+    $name = strtolower($name);
+    $this-&amp;gt;new_name = $name . &#39;.&#39; . $ext;
+    if (isset($this-&amp;gt;config[&#39;overwrite&#39;]) &amp;amp;&amp;amp; $this-&amp;gt;config[&#39;overwrite&#39;]) {
+        return $this;
+    }
+    $count = 0;
+    while (file_exists($this-&amp;gt;config[&#39;directory&#39;] . &#39;/&#39; . $this-&amp;gt;new_name)) {
+        $count++;
+        $this-&amp;gt;new_name = $name . &#39;_&#39; . $count . &#39;.&#39; . $ext;
+    }
+    return $this;
+}
+
+// Move uploaded file with new name
+protected function moveFile() {
+    $this-&amp;gt;setNewName();
+    return move_uploaded_file($this-&amp;gt;current[&#39;tmp_name&#39;], $this-&amp;gt;config[&#39;directory&#39;] . &#39;/&#39; . $this-&amp;gt;new_name);
+}
+
+// Sets error messages according to upload error
+protected function uploadError() {
+    switch ($this-&amp;gt;current[&#39;error&#39;]) {
+        case 1:
+        case 2:
+            $this-&amp;gt;error(&#39;The file is bigger than specified limit.&#39;);
+            break;
+        case 3:
+            $this-&amp;gt;error(&#39;The file is uploaded partially. Please try again.&#39;);
+            break;
+        case 4:
+            $this-&amp;gt;error(&#39;No file selected to upload.&#39;);
+            break;
+        case 6:
+            $this-&amp;gt;error(&#39;No upload directory has been specified.&#39;);
+            break;
+        default :
+            $this-&amp;gt;error(&#39;Failed to upload the file.&#39;);
+            break;
+    }
+}
+
+// Public method to execute the upload process
+public function run() {
+    $this-&amp;gt;current = current($_FILES);
+    if ($this-&amp;gt;current[&#39;error&#39;] != 0) {
+        $this-&amp;gt;uploadError();
+        return FALSE;
+    }
+    if (!$this-&amp;gt;allowedExtension()) {
+        $this-&amp;gt;error(&#39;The type of the file is not supported.&#39;);
+        return FALSE;
+    }
+    if (!$this-&amp;gt;allowedSize()) {
+        $this-&amp;gt;error(&#39;The size of the file is bigger than limit.&#39;);
+        return FALSE;
+    }
+    if (!$this-&amp;gt;checkDirectory()) {
+        $this-&amp;gt;error(&#39;Unable to access upload directory&#39;);
+        return FALSE;
+    }
+    if ($this-&amp;gt;moveFile()) {
+        return $this-&amp;gt;new_name;
+    }
+    return FALSE;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;adding-power-to-the-constructor&quot;&gt;Adding power to the Constructor&lt;/h2&gt;
+
+&lt;p&gt;While we are able set configuration settings by calling respective methods, it will be more comprehensive if we can provide an option to set the configuration in the constructor.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function __construct($config = array()) {
+    if ($config &amp;amp;&amp;amp; !is_array($config)) {
+        return FALSE;
+    }
+    foreach ($config as $option =&amp;gt; $value) {
+        $parts = explode(&#39;_&#39;, $option);
+        $cap = array_map(&#39;ucfirst&#39;, $parts);
+        $method = &#39;set&#39; . implode(&quot;&quot;, $cap);
+        if (method_exists($this, $method)) {
+            call_user_func_array(array($this, $method), (array) $value);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;To use this class, lets have a form first.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;form action=&quot;&amp;lt;?php echo $_SERVER[&#39;PHP_SELF&#39;]; ?&amp;gt;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&amp;gt;
+    &amp;lt;label for=&quot;file&quot;&amp;gt;Select File:&amp;lt;/label&amp;gt;
+    &amp;lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot;&amp;gt;
+    &amp;lt;input type=&quot;submit&quot; name=&quot;upload&quot; value=&quot;Upload File&quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add following lines of code at the top of the document.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if(isset($_POST[&#39;upload&#39;])) {
+    require &#39;upload.php&#39;;
+    $upload = new Upload([
+        &#39;overwrite&#39; =&amp;gt; FALSE,
+        &#39;max_size&#39; =&amp;gt; &#39;5M&#39;,
+        &#39;directory&#39; =&amp;gt; __DIR__ . &#39;/uploads/&#39;,
+        &#39;disallowed_extensions&#39; =&amp;gt; &#39;exe, bin, sh, py&#39;,
+    ]);
+    $response = $upload-&amp;gt;run();
+    if(!$response) {
+        $errors = $upload-&amp;gt;error();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <pubDate>Sun, 29 Sep 2013 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/create-file-upload-class-in-php/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/create-file-upload-class-in-php/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
+        
+            <item>
+                <title>Enhance File Upload Security with PHP</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;We often face a situation where we need to provide our users a way to upload image, pdf, document etc. The basic html form for file upload is able to handle this with the help of PHP. The basic process of uploading user submitted files to the server with PHP is fairly easy and simple. But there should be some security measures. What will happen if a bad user uploads a malicious file to our server?&lt;/p&gt;
+
+&lt;p&gt;Here we will discuss some of this security measures to block the holes.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-form&quot;&gt;The Form&lt;/h2&gt;
+
+&lt;p&gt;Before anything else, lets assume we have a form for the users to upload a file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;form action=&quot;&amp;lt;?php echo $_SERVER[&#39;PHP_SELF&#39;]; ?&amp;gt;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&amp;gt;
+    &amp;lt;label for=&quot;file&quot;&amp;gt;Select File:&amp;lt;/label&amp;gt;
+    &amp;lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot;&amp;gt;
+    &amp;lt;input type=&quot;submit&quot; name=&quot;upload&quot; value=&quot;Upload File&quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Remember to use &lt;code&gt;method=&quot;post&quot;&lt;/code&gt; whenever using a form for file upload. As you are already aware of, &lt;code&gt;enctype=&quot;multipart/form-data&quot;&lt;/code&gt; is necessary because it tells the browser how to handle the data submitted as a file.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;files-array&quot;&gt;&lt;code&gt;$_FILES&lt;/code&gt; Array&lt;/h2&gt;
+
+&lt;p&gt;As soon as the file uploads, its details become available in the PHP’s &lt;code&gt;$_FILES&lt;/code&gt; superglobal array.&lt;/p&gt;
+
+&lt;p&gt;If you add the following lines at the top of your page,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+    if(isset($_POST[&#39;upload&#39;])) { // Checking whether the form has been submitted
+        echo &#39;&amp;lt;pre&amp;gt;&#39;;   
+        print_r($_FILES);
+        echo &#39;&amp;lt;/pre&amp;gt;&#39;;
+    }
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and then you upload a file named flower.jpg. After you click ‘Upload File’ button, the details would be shown like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Array
+(
+    [file] =&amp;gt; Array
+        (
+            [name] =&amp;gt; flower.jpg
+            [type] =&amp;gt; image/jpeg
+            [tmp_name] =&amp;gt; C:\xampp\tmp\php9F19.tmp
+            [error] =&amp;gt; 0
+            [size] =&amp;gt; 780831
+        )
+
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-errors&quot;&gt;The Errors&lt;/h2&gt;
+
+&lt;p&gt;Before we continue, lets take a look at the errors we can have. In the previous example, the &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;0&lt;/code&gt; which means that there is no error and the file has been successfully uploaded.&lt;/p&gt;
+
+&lt;p&gt;Lets take a look at the various error codes and what they mean.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;0 =&amp;gt; No Error
+1 =&amp;gt; Exceeds upload_max_filesize in PHP configuration
+2 =&amp;gt; Exceeds MAX_FILE_SIZE in hidden form field
+3 =&amp;gt; File partially uploaded
+4 =&amp;gt; No file to upload
+6 =&amp;gt; No temporary upload folder defined
+7 =&amp;gt; PHP failed to write to disk
+8 =&amp;gt; A PHP extension prevent the file to be uploaded
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;maxfilesize&quot;&gt;MAX_FILE_SIZE&lt;/h2&gt;
+
+&lt;p&gt;In some cases, you might want to limit the size of the file to be uploaded. The &lt;code&gt;MAX_FILE_SIZE&lt;/code&gt; field tells the browser to prevent the upload if it exceeds certain size. To use this feature, add the following code before the file input field.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+    $max_size = 100 * 1024; // 100KB
+?&amp;gt;
+&amp;lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;&amp;lt;?php echo $max_size; ?&amp;gt;&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If a file larger than the size set, the error will be set to &lt;code&gt;2&lt;/code&gt; and it will not be attempted to upload.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;upload-directory&quot;&gt;Upload Directory&lt;/h2&gt;
+
+&lt;p&gt;When setting or specifying a directory to store the uploaded files, it is much professional to consider some points before doing so.&lt;/p&gt;
+
+&lt;p&gt;The directory where the uploaded file will live, must be set writable. In Linux, permission to the folder must be set to at least 755 or 775.&lt;/p&gt;
+
+&lt;p&gt;If the files are going to be accessible by public, the directory can be under the root of the server. But if the files are protected or contains sensitive data, then it is much wiser to put the directory outside the scope of the server root so that it cannot be accessible vis public url.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;move-uploaded-file&quot;&gt;Move Uploaded File&lt;/h2&gt;
+
+&lt;p&gt;It is necessary to move the uploaded file to the directory specified for the files. Otherwise, the uploaded file will be lost as it is just saved as a temporary file at first.&lt;/p&gt;
+
+&lt;p&gt;To move the uploaded file, we will use &lt;code&gt;move_uploaded_file()&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+    if(isset($_POST[&#39;upload&#39;])) { // Checking whether the form has been submitted
+        ...
+        $directory = __DIR__ . &#39;/uploads/&#39;;
+        if($_FILES[&#39;file&#39;][&#39;error&#39;] == 0) { // No error
+            $result = move_uploaded_file($_FILES[&#39;file&#39;][&#39;tmp_name&#39;], $directory . $_FILES[&#39;file&#39;][&#39;name&#39;]);
+            if($result) {
+                echo $_FILES[&#39;file&#39;][&#39;name&#39;] . &#39; has been successfully uploaded.&#39;;
+            } else {
+                echo &#39;There was a problem uploading &#39; . $_FILES[&#39;file&#39;][&#39;name&#39;];
+            }
+        }
+        ...
+    }
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now the uploaded files will the saved in the ‘uploads’ directory.&lt;/p&gt;
+
+&lt;p&gt;We have improved to some extent but there is a long path to go. We have not implemented any check on file types, file names and we have not provided any support for uploading multiple files. Also, if the uploaded files have same filename, the older one will be overwritten.&lt;/p&gt;
+
+&lt;p&gt;To avoid these situations and implement more validation, we will handle the upload a bit differently. We will &lt;a href=&quot;http://www.arkaroy.net/blog/create-file-upload-class-in-php/&quot;&gt;Create a File Upload Class in PHP&lt;/a&gt; to handle the file upload more efficiently.&lt;/p&gt;
+</description>
+                <pubDate>Tue, 17 Sep 2013 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
+        
+            <item>
                 <title>Advantages of HTML5</title>
                 <dc:creator>Arka Roy</dc:creator>
                 <description>&lt;p&gt;HTML5 is the new definition of web designing. It has been designed to replace both HTML 4, XHTML, and the HTML DOM Level 2. HTML5 is specially designed to deliver rich content without the need for additional plugins. The current version delivers everything from animation to graphics, music to movies, and can also be used to build complicated web applications. HTML5 is also cross-platform. It is designed to work whether you are using a PC, or a Tablet, a Smartphone, or a Smart TV.&lt;/p&gt;
@@ -887,11 +1331,19 @@ $config[&#39;enable_cache&#39;] = TRUE;
             <item>
                 <title>Arena Animation Landing Page</title>
                 <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/arena-animation-landing-page-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;
-&lt;br /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/image/arena-animation-landing-page-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+                <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-landing-page-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-landing-page-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-landing-page-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
                 <pubDate>Tue, 10 Apr 2012 00:00:00 +0530</pubDate>
                 <link>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</link>

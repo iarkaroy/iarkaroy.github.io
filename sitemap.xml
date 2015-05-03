@@ -20,6 +20,15 @@
     </url>
     
     <url>
+        <loc>http://www.arkaroy.net/blog/category-pagination-in-jekyll/</loc>
+        
+        <lastmod>2015-03-28T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</loc>
         
         <lastmod>2015-01-23T00:00:00+05:30</lastmod>
@@ -137,6 +146,15 @@
     </url>
     
     <url>
+        <loc>http://www.arkaroy.net/blog/early-devices-to-project-animation-before-films/</loc>
+        
+        <lastmod>2013-06-05T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>http://www.arkaroy.net/portfolio/student-resource-manager-web-application/</loc>
         
         <lastmod>2012-05-23T00:00:00+05:30</lastmod>
@@ -171,7 +189,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/about/</loc>
-        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
+        <lastmod>2015-05-03T22:27:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -182,7 +200,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/contact/</loc>
-        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
+        <lastmod>2015-05-03T22:27:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -195,7 +213,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/</loc>
-        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
+        <lastmod>2015-05-03T22:27:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -204,7 +222,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/portfolio/</loc>
-        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
+        <lastmod>2015-05-03T22:27:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -212,6 +230,15 @@
     
     
     
+    
+    
+    
+    <url>
+        <loc>http://www.arkaroy.net/social-popularity-analyzer/</loc>
+        <lastmod>2015-05-03T22:27:54+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
     
     
     
@@ -221,7 +248,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/blog/</loc>
-        <lastmod>2015-04-30T20:04:36+05:30</lastmod>
+        <lastmod>2015-05-03T22:27:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

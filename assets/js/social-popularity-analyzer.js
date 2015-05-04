@@ -124,7 +124,7 @@ function getBufferPopularity(url, callback) {
         url: "https://api.bufferapp.com/1/links/shares.json",
         method: "GET",
         data: {"url":url},
-        dataType: "json",
+        dataType: "jsonp",
         success: function(response) {
             callback(response);
         }

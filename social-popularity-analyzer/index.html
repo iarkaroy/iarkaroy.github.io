@@ -123,14 +123,55 @@
 <h4>Analyze social popularity of your website.</h4>
 
 <form action="#" method="post" class="form social-popularity-analyzer-form">
-    
+
     <label for="url">URL</label>
     <input type="text" name="url" id="url" placeholder="http://www.arkaroy.net/">
-    
+
     <button type="submit" class="button" id="social-popularity-analyzer-submit">Analyze</button>
-    
+
 </form>
 
+<div class="social-popularity-analyzer-results">
+
+    <div class="spa-result facebook">
+        <div class="header"><h5>Facebook <i class="fa fa-facebook fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Shares: <span id="fb-share">0</span></label>
+            <label>Total Likes: <span id="fb-like">0</span></label>
+            <label>Total Comments: <span id="fb-comment">0</span></label>
+            <label>Total Actions: <span id="fb-total">0</span></label>
+        </div>
+    </div>
+
+    <div class="spa-result twitter">
+        <div class="header"><h5>Twitter <i class="fa fa-twitter fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Shares: <span id="twitter-share">0</span></label>
+        </div>
+    </div>
+
+    <div class="spa-result linkedin">
+        <div class="header"><h5>LinkedIn <i class="fa fa-linkedin fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Shares: <span id="linkedin-share">0</span></label>
+        </div>
+    </div>
+
+    <div class="spa-result pinterest">
+        <div class="header"><h5>Pinterest <i class="fa fa-pinterest fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Shares: <span id="pinterest-share">0</span></label>
+        </div>
+    </div>
+
+    <div class="spa-result stumbleupon">
+        <div class="header"><h5>StumbleUpon</h5></div>
+        <div class="body">
+            <label>Total Views: <span id="stumbleupon-view">0</span></label>
+        </div>
+    </div>
+
+</div>
                 <footer class="page-footer">
     <ul class="footer-menu list-inline">
         <li><i class="fa fa-copyright fa-fw"></i> 2015 Arka Roy</li>

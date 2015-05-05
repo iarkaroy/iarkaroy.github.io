@@ -122,54 +122,106 @@
                 <h1>Social Popularity Analyzer</h1>
 <h4>Analyze social popularity of your website.</h4>
 
-<form action="#" method="post" class="form social-popularity-analyzer-form">
+<form action="#" method="post" class="social-popularity-analyzer-form clearfix">
 
-    <label for="url">URL</label>
+    <label for="url"><i class="fa fa-link fa-fw"></i></label>
     <input type="text" name="url" id="url" placeholder="http://www.arkaroy.net/">
-
-    <button type="submit" class="button" id="social-popularity-analyzer-submit">Analyze</button>
+    <button type="submit" id="social-popularity-analyzer-submit">
+        <i class="fa fa-flask fa-fw"></i>
+        <span>Analyze</span>
+    </button>
 
 </form>
 
-<div class="social-popularity-analyzer-results">
+<br><br>
 
-    <div class="spa-result facebook">
-        <div class="header"><h5>Facebook <i class="fa fa-facebook fa-fw"></i></h5></div>
+<div class="social-popularity-analyzer-results">
+    
+    <h5 id="analysis-report-heading">Analysis Report for</h5>
+
+    <br>
+    
+    <div class="spa-result facebook-border">
+        <div class="header facebook"><h5>Facebook <i class="fa fa-facebook fa-fw"></i></h5></div>
         <div class="body">
-            <label>Total Shares: <span id="fb-share">0</span></label>
-            <label>Total Likes: <span id="fb-like">0</span></label>
-            <label>Total Comments: <span id="fb-comment">0</span></label>
-            <label>Total Actions: <span id="fb-total">0</span></label>
+            <label>Total Shares: <span id="facebook-share">0</span></label>
+            <label>Total Likes: <span id="facebook-like">0</span></label>
+            <label>Total Comments: <span id="facebook-comment">0</span></label>
+            <label>Total Actions: <span id="facebook-total">0</span></label>
         </div>
     </div>
 
-    <div class="spa-result twitter">
-        <div class="header"><h5>Twitter <i class="fa fa-twitter fa-fw"></i></h5></div>
+    <div class="spa-result twitter-border">
+        <div class="header twitter"><h5>Twitter <i class="fa fa-twitter fa-fw"></i></h5></div>
         <div class="body">
             <label>Total Shares: <span id="twitter-share">0</span></label>
         </div>
     </div>
 
-    <div class="spa-result linkedin">
-        <div class="header"><h5>LinkedIn <i class="fa fa-linkedin fa-fw"></i></h5></div>
+    <div class="spa-result googleplus-border">
+        <div class="header googleplus"><h5>Google Plus <i class="fa fa-google-plus fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Ones: <span id="googleplus-one">0</span></label>
+        </div>
+    </div>
+    
+    <div class="spa-result linkedin-border">
+        <div class="header linkedin"><h5>LinkedIn <i class="fa fa-linkedin fa-fw"></i></h5></div>
         <div class="body">
             <label>Total Shares: <span id="linkedin-share">0</span></label>
         </div>
     </div>
 
-    <div class="spa-result pinterest">
-        <div class="header"><h5>Pinterest <i class="fa fa-pinterest fa-fw"></i></h5></div>
+    <div class="spa-result pinterest-border">
+        <div class="header pinterest"><h5>Pinterest <i class="fa fa-pinterest fa-fw"></i></h5></div>
         <div class="body">
-            <label>Total Shares: <span id="pinterest-share">0</span></label>
+            <label>Total Pins: <span id="pinterest-pin">0</span></label>
         </div>
     </div>
 
-    <div class="spa-result stumbleupon">
-        <div class="header"><h5>StumbleUpon</h5></div>
+    <div class="spa-result stumbleupon-border">
+        <div class="header stumbleupon"><h5>StumbleUpon <i class="fa fa-stumbleupon fa-fw"></i></h5></div>
         <div class="body">
             <label>Total Views: <span id="stumbleupon-view">0</span></label>
         </div>
     </div>
+    
+    <div class="spa-result delicious-border">
+        <div class="header delicious"><h5>Delicious <i class="fa fa-delicious fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Bookmarks: <span id="delicious-bookmark">0</span></label>
+        </div>
+    </div>
+    
+    <!--
+    <div class="spa-result reddit-border">
+        <div class="header reddit"><h5>Reddit <i class="fa fa-reddit fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Ups: <span id="reddit-up">0</span></label>
+            <label>Total Downs: <span id="reddit-down">0</span></label>
+            <label>Total Score: <span id="reddit-score">0</span></label>
+        </div>
+    </div>
+    -->
+    
+    <div class="spa-result buffer-border">
+        <div class="header buffer"><h5>Buffer <i class="fa fa-buffer fa-fw"></i></h5></div>
+        <div class="body">
+            <label>Total Shares: <span id="buffer-share">0</span></label>
+        </div>
+    </div>
+    
+    <!--
+    <div id="shares-facebook"></div>
+    <div id="shares-twitter"></div>
+    <div id="shares-googleplus"></div>
+    <div id="shares-linkedin"></div>
+    <div id="shares-pinterest"></div>
+    <div id="shares-stumbleupon"></div>
+    <div id="shares-delicious"></div>
+    <div id="shares-reddit"></div>
+    <div id="shares-buffer"></div>
+    -->
 
 </div>
                 <footer class="page-footer">

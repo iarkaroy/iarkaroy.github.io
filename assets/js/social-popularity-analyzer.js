@@ -83,13 +83,13 @@ function popularizeSocialInfo(data) {
     $("#buffer-share").html(data.social.buffer.share);
 
     // All Shares
-    $("#shares-facebook").html(data.social.shares.facebook);
-    $("#shares-twitter").html(data.social.shares.twitter);
-    $("#shares-googleplus").html(data.social.shares.googleplus);
-    $("#shares-linkedin").html(data.social.shares.linkedin);
-    $("#shares-pinterest").html(data.social.shares.pinterest);
-    $("#shares-stumbleupon").html(data.social.shares.stumbleupon);
-    $("#shares-delicious").html(data.social.shares.delicious);
-    //$("#shares-reddit").html(data.social.shares.reddit);
-    $("#shares-buffer").html(data.social.shares.buffer);
+    $(".shares-facebook").html(data.social.shares.facebook);
+    $(".shares-twitter").html(data.social.shares.twitter);
+    $(".shares-googleplus").html(data.social.shares.googleplus);
+    $(".shares-linkedin").html(data.social.shares.linkedin);
+    $(".shares-pinterest").html(data.social.shares.pinterest);
+    $(".shares-stumbleupon").html(data.social.shares.stumbleupon);
+    $(".shares-delicious").html(data.social.shares.delicious);
+    //$(".shares-reddit").html(data.social.shares.reddit);
+    $(".shares-buffer").html(data.social.shares.buffer);
 }

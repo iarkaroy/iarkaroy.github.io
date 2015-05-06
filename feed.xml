@@ -5,8 +5,8 @@
         <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
         <link>http://www.arkaroy.net/</link>
         <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Tue, 05 May 2015 21:20:25 +0530</pubDate>
-        <lastBuildDate>Tue, 05 May 2015 21:20:25 +0530</lastBuildDate>
+        <pubDate>Wed, 06 May 2015 23:03:27 +0530</pubDate>
+        <lastBuildDate>Wed, 06 May 2015 23:03:27 +0530</lastBuildDate>
         
             <item>
                 <title>How to use Zaq: Codeigniter Template Parser Engine</title>
@@ -885,6 +885,47 @@ end
             </item>
         
             <item>
+                <title>Download ZIP File Dynamically with PHP</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;ZIP is a very popular archive file format that supports lossless data compression. A .ZIP file may contain one or more files or folders that may have been compressed. ZIP files are used in almost every downloadable content as it is widely supported by almost all operating systems.&lt;/p&gt;
+
+&lt;p&gt;ZIP files generally use the file extensions “.zip” or “.ZIP” and the MIME media type &lt;code&gt;application/zip&lt;/code&gt;. ZIP is used as a base file format by many applications and tools. Most popular among them is WordPress. They use zip file format for themes, plugins and the application itself. And everything is done dynamically.&lt;/p&gt;
+
+&lt;p&gt;Here we will see how we can make a webpage act as an initializer to download a zip file. We will just provide the location of the file and PHP will download it to the user. In the back-end, the HTTP headers are responsible for the download. We will set the headers with PHP.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$filename = &quot;My Awesome Zip File.zip&quot;;
+$filepath = &quot;/var/www/downloads/file.zip&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;$filename&lt;/code&gt; contains the name that will appear to the user and &lt;code&gt;$filepath&lt;/code&gt; contains the full absolute path where the file is physically located.&lt;/p&gt;
+
+&lt;p&gt;Now we will set the headers with PHP &lt;a href=&quot;http://php.net/manual/en/function.header.php&quot;&gt;header()&lt;/a&gt;. And whenever any request comes to this page, browser will read the header response and start the download immediately.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;header(&quot;Pragma: public&quot;);
+header(&quot;Expires: 0&quot;);
+header(&quot;Cache-Control: must-revalidate&quot;);
+header(&quot;Cache-Control: public&quot;);
+header(&quot;Content-Description: File Transfer&quot;);
+header(&quot;Content-type: application/octet-stream&quot;);
+header(&#39;Content-Disposition: attachment; filename=&quot;&#39; . $filename . &#39;&quot;&#39;);
+header(&quot;Content-Transfer-Encoding: binary&quot;);
+header(&quot;Content-Length: &quot; . filesize($filepath));
+ob_end_flush();
+@readfile($filepath);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Of course, the name of the downloaded file will be &lt;em&gt;My Awesome Zip File.zip&lt;/em&gt;.&lt;/p&gt;
+</description>
+                <pubDate>Wed, 23 Oct 2013 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/download-zip-file-dynamically-with-php/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/download-zip-file-dynamically-with-php/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
+        
+            <item>
                 <title>How to Add Scalable Vector Graphics (SVG) to Web Page</title>
                 <dc:creator>Arka Roy</dc:creator>
                 <description>&lt;p&gt;Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files.&lt;/p&gt;
@@ -1543,9 +1584,43 @@ public function run() {
                 <dc:creator>Arka Roy</dc:creator>
                 <description>&lt;p&gt;Numerous devices which successfully displayed animated images were introduced well before the advent of the motion picture. These devices were used to entertain, amaze and sometimes even frighten people. The majority of these devices did not project their images and accordingly could only be viewed by a single person at any one time. For this reason, they were considered toys rather than being a large scale entertainment industry like later animation. Many of these devices are still built by and for film students being taught the basic principles of animation.&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;the-magic-lantern-c-1650&quot;&gt;The Magic Lantern (c. 1650)&lt;/h2&gt;
 
 &lt;p&gt;The Magic Lantern is an early predecessor of the modern day projector. It consists of a translucent oil painting, a simple lens and a candle or oil lamp. In a darkened room, the image would appear projected onto an adjacent flat surface. It was often used to project demonic, frightening images in order to convince people that they were witnessing the supernatural. Some slides for the lanterns contained moving parts which makes the Magic Lantern the earliest known example of projected animation. The origin of the Magic Lantern is debated, but in the 15th century the Venetian inventor Giovanni Fontana published an illustration of a device which projected the image of a demon in his Liber Instrumentorum. The earliest known actual magic lanterns are usually credited to Christiaan Huygens or Athanasius Kircher.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;thaumatrope-1824&quot;&gt;Thaumatrope (1824)&lt;/h2&gt;
+
+&lt;p&gt;A thaumatrope was a simple toy used in the Victorian era. A thaumatrope is a small circular disk or card with two different pictures on each side that was attached to a piece of string or a pair of strings running through the centre. When the string is twirled quickly between the fingers, the two pictures appear to combine into a single image. The thaumatrope demonstrates the Phi phenomenon, the brain’s ability to persistently perceive an image. Its invention is often credited to Sir John Herschel. John A. Paris popularized the invention when he used one to illustrate the Phi phenomenon in 1824 to the Royal College of Physicians.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;phenakistoscope-1831&quot;&gt;Phenakistoscope (1831)&lt;/h2&gt;
+
+&lt;p&gt;The phenakistoscope was an early animation device. It was invented in 1831 simultaneously by the Belgian Joseph Plateau and the Austrian Simon von Stampfer. It consists of a disk with a series of images, drawn on radii evenly spaced around the center of the disk. Slots are cut out of the disk on the same radii as the drawings, but at a different distance from the center. The device would be placed in front of a mirror and spun. As the phenakistoscope is spun, a viewer would look through the slots at the reflection of the drawings which would only become visible when a slot passes by the viewer’s eye. This created the illusion of animation.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;zoetrope-180-ad-1834&quot;&gt;Zoetrope (180 AD; 1834)&lt;/h2&gt;
+
+&lt;p&gt;The zoetrope concept was suggested in 1834 by William George Horner, and from the 1860s marketed as the zoetrope. It operates on the same principle as the phenakistoscope. It was a cylindrical spinning device with several frames of animation printed on a paper strip placed around the interior circumference. There are vertical slits around the sides through which an observer can view the moving images on the opposite side when the cylinder spins. As it spins the material between the viewing slits moves in the opposite direction of the images on the other side and in doing so serves as a rudimentary shutter. The zoetrope had several advantages over the basic phenakistoscope. It didn’t require the use of a mirror to view the illusion, and because of its cylindrical shape it could be viewed by several people at once.&lt;/p&gt;
+
+&lt;p&gt;In China around 180 AD the prolific inventor [Ting Huan] invented a device similar to the modern zoetrope. It was made of translucent paper or mica panels and was operated by being hung over a lamp so that vanes at the top would rotate as they came in contact with the warm air currents rising from the lamp. It has been stated that this rotation, if it reached the ideal speed triggered the same illusion of quick animation as the later zoetrope, but since there was no “shutter” (the slots in a zoetrope), the effect was in fact simply a series of horizontally drifting figures, with no true animation.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;flip-book-1868&quot;&gt;Flip book (1868)&lt;/h2&gt;
+
+&lt;p&gt;The first flip book was patented in 1868 by John Barnes Linnett as the kineograph. A flip book is just a book with particularly springy pages that have an animated series of images printed near the unbound edge. A viewer bends the pages back and then rapidly releases them one at a time so that each image viewed springs out of view to momentarily reveal the next image just before it does the same. They operate on the same principle as the phenakistoscope and the zoetrope what with the rapid replacement of images with others, but they create the illusion without any thing serving as a flickering shutter as the slits had in the previous devices. They accomplish this because of the simple physiological fact that the eye can focus more easily on stationary objects than on moving ones. Flip books were more often cited as inspiration by early animated filmmakers than the previously discussed devices which didn’t reach quite as wide of an audience. In previous animation devices the images were drawn in circles which meant diameter of the circles physically limited just how many images could reasonably be displayed. While the book format still brings about something of a physical limit to the length of the animation, this limit is significantly longer than the round devices. Even this limit was able to be broken with the invention of themutoscope in 1894. It consisted of a long circularly bound flip book in a box with a crank handle to flip through the pages.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;praxinoscope-1877&quot;&gt;Praxinoscope (1877)&lt;/h2&gt;
+
+&lt;p&gt;The first animated projection (screening) was created in France, by Charles-Emile Reynaud, who was a French science teacher. Reynaud created the Praxinoscope in 1877 and the Theatre Optique in December 1888. On 28 October 1892, he projected the first animation in public, Pauvre Pierrot, at the Musee Grevin in Paris. This film is also notable as the first known instance of film perforations being used. His films were not photographed, but drawn directly onto the transparent strip. In 1900, more than 500,000 people had attended these screenings.&lt;/p&gt;
 </description>
                 <pubDate>Wed, 05 Jun 2013 00:00:00 +0530</pubDate>
                 <link>http://www.arkaroy.net/blog/early-devices-to-project-animation-before-films/</link>

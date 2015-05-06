@@ -101,6 +101,15 @@
     </url>
     
     <url>
+        <loc>http://www.arkaroy.net/blog/download-zip-file-dynamically-with-php/</loc>
+        
+        <lastmod>2013-10-23T00:00:00+05:30</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</loc>
         
         <lastmod>2013-10-19T00:00:00+05:30</lastmod>
@@ -189,7 +198,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/about/</loc>
-        <lastmod>2015-05-05T21:20:25+05:30</lastmod>
+        <lastmod>2015-05-06T23:03:27+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -200,7 +209,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/contact/</loc>
-        <lastmod>2015-05-05T21:20:25+05:30</lastmod>
+        <lastmod>2015-05-06T23:03:27+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -213,7 +222,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/</loc>
-        <lastmod>2015-05-05T21:20:25+05:30</lastmod>
+        <lastmod>2015-05-06T23:03:27+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -222,7 +231,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/portfolio/</loc>
-        <lastmod>2015-05-05T21:20:25+05:30</lastmod>
+        <lastmod>2015-05-06T23:03:27+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -235,7 +244,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/social-popularity-analyzer/</loc>
-        <lastmod>2015-05-05T21:20:25+05:30</lastmod>
+        <lastmod>2015-05-06T23:03:27+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -248,7 +257,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/blog/</loc>
-        <lastmod>2015-05-05T21:20:25+05:30</lastmod>
+        <lastmod>2015-05-06T23:03:27+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

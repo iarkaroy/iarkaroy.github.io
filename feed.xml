@@ -5,8 +5,8 @@
         <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
         <link>http://www.arkaroy.net/</link>
         <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Wed, 06 May 2015 23:03:27 +0530</pubDate>
-        <lastBuildDate>Wed, 06 May 2015 23:03:27 +0530</lastBuildDate>
+        <pubDate>Thu, 07 May 2015 20:47:43 +0530</pubDate>
+        <lastBuildDate>Thu, 07 May 2015 20:47:43 +0530</lastBuildDate>
         
             <item>
                 <title>How to use Zaq: Codeigniter Template Parser Engine</title>
@@ -1456,6 +1456,127 @@ public function run() {
                 <pubDate>Tue, 17 Sep 2013 00:00:00 +0530</pubDate>
                 <link>http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</link>
                 <guid isPermaLink="true">http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</guid>
+                
+                
+                    <category>blog</category>
+                
+            </item>
+        
+            <item>
+                <title>Convert Relative Path to Absolute URL with PHP</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;I was developing a Web Crawler with PHP. But whenever I was crawling a url to get the links from that url, I found that most of the websites use relative path to link to their internal pages. The browser is smart enough to convert those relative paths to absolute url and request the correct page whenever those relative paths are clicked. But, as it seems, PHP does not have any inbuilt support to convert those relative paths to absolute urls.&lt;/p&gt;
+
+&lt;p&gt;Therefore, I decided to define a method to do the job. Here I am sharing my method of converting relative path to absolute url.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-base&quot;&gt;The Base&lt;/h2&gt;
+
+&lt;p&gt;The first thing to mention is the base url. The relative paths are, actually, relative to the base url. If the page contains any &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt; tag with its &lt;code&gt;href&lt;/code&gt; attribute set, the browser will treat that url as base url. Otherwise, the browser will treat the url of the current page as the base url.&lt;/p&gt;
+
+&lt;p&gt;Now first define a base url:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$baseUrl = &#39;http://example.com/some/fake/path/page.html&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So we are assuming that we are currently on this page and this url is our base url as defined with &lt;code&gt;$baseUrl&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-method&quot;&gt;The Method&lt;/h2&gt;
+
+&lt;p&gt;As the base url is set, its time to start defining the method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function absoluteUrl($relativeUrl, $baseUrl) {
+    // some codes to execute
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here we will pass the relative path as the &lt;code&gt;$relativeUrl&lt;/code&gt; and the base url as the &lt;code&gt;$baseUrl&lt;/code&gt;. I decided to pass each and every path I encounter while crawling. Therefore the path may be an absolute one. So we have to keep that in mind.&lt;/p&gt;
+
+&lt;p&gt;Now here is the body of the method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Skip converting if the relative url like http://... or android-app://... etc.
+if (preg_match(&#39;/[a-z0-9-]{1,}(:\/\/)/i&#39;, $relativeUrl)) {
+    return $relativeUrl;
+}
+
+// Treat path as invalid if it is like javascript:... etc.
+if (preg_match(&#39;/^[a-zA-Z]{0,}:[^\/]{0,1}/i&#39;, $relativeUrl)) {
+    return NULL;
+}
+
+// Convert //www.google.com to http://www.google.com
+if(substr($relativeUrl, 0, 2) == &#39;//&#39;) {
+    return &#39;http:&#39; . $relativeUrl;
+}
+
+// If the path is a fragment or query string,
+// it will be appended to the base url
+if(substr($relativeUrl, 0, 1) == &#39;#&#39; || substr($relativeUrl, 0, 1) == &#39;?&#39;) {
+    return $baseUrl . $relativeUrl;
+}
+
+// Treat paths with doc root, i.e, /about
+if(substr($relativeUrl, 0, 1) == &#39;/&#39;) {
+    return onlySitePath($baseUrl) . $relativeUrl;
+}
+
+// For paths like ./foo, it will be appended to the furthest directory
+if(substr($relativeUrl, 0, 2) == &#39;./&#39;) {
+    return uptoLastDir($baseUrl) . substr($relativeUrl, 2);
+}
+
+// Convert paths like ../foo or ../../bar
+if(substr($relativeUrl, 0, 3) == &#39;../&#39;) {
+    $rel = $relativeUrl;
+    $base = uptoLastDir($baseUrl);
+    while(substr($rel, 0, 3) == &#39;../&#39;) {
+        $base = preg_replace(&#39;/\/([^\/]+\/)$/i&#39;, &#39;/&#39;, $base);
+        $rel = substr($rel, 3);
+    }
+    return $base . $rel;
+}
+
+// else
+return uptoLastDir($baseUrl) . $relativeUrl;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now in the method you have found two another method &lt;code&gt;uptoLastDir()&lt;/code&gt; and &lt;code&gt;onlySitePath()&lt;/code&gt;. Here is those methods:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Get the root path from url
+// http://example.com/some/fake/path/page.html =&amp;gt; http://example.com/
+function onlySitePath($url) {
+    $url = preg_replace(&#39;/(^https?:\/\/.+?\/)(.*)$/i&#39;, &#39;$1&#39;, $url);
+    return rtrim($url, &#39;/&#39;);
+}
+
+// Get the path with last directory
+// http://example.com/some/fake/path/page.html =&amp;gt; http://example.com/some/fake/path/
+function uptoLastDir($url) {
+    $url = preg_replace(&#39;/\/([^\/]+\.[^\/]+)$/i&#39;, &#39;&#39;, $url);
+    return rtrim($url, &#39;/&#39;) . &#39;/&#39;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;echo absoluteUrl(&#39;/about&#39;, &#39;http://example.com/dir/&#39;);
+// Output: http://example.com/about
+
+echo absoluteUrl(&#39;dir.html&#39;, &#39;http://example.com/dir/page.html&#39;);
+// Output: http://example.com/dir/dir.html
+
+echo absoluteUrl(&#39;../../foo.html&#39;, &#39;http://example.com/dir/foo/bar/index.html&#39;)
+// Output: http://example.com/dir/foo.html
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <pubDate>Tue, 03 Sep 2013 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/blog/convert-relative-path-to-absolute-url-with-php/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/blog/convert-relative-path-to-absolute-url-with-php/</guid>
                 
                 
                     <category>blog</category>

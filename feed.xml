@@ -5,8 +5,26 @@
         <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
         <link>http://www.arkaroy.net/</link>
         <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Tue, 12 May 2015 23:03:57 +0530</pubDate>
-        <lastBuildDate>Tue, 12 May 2015 23:03:57 +0530</lastBuildDate>
+        <pubDate>Wed, 13 May 2015 11:01:10 +0530</pubDate>
+        <lastBuildDate>Wed, 13 May 2015 11:01:10 +0530</lastBuildDate>
+        
+            <item>
+                <title>Social Popularity Analyzer</title>
+                <dc:creator>Arka Roy</dc:creator>
+                <description>&lt;p&gt;A simple tool to analyze social popularity of any given url or link in different social media.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/social-popularity-analyzer/&quot;&gt;&lt;img src=&quot;/assets/image/social-popularity-analyzer-01.jpg&quot; alt=&quot;Social Popularity Analyzer&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+                <pubDate>Sun, 12 Apr 2015 00:00:00 +0530</pubDate>
+                <link>http://www.arkaroy.net/portfolio/social-popularity-analyzer/</link>
+                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/social-popularity-analyzer/</guid>
+                
+                
+                    <category>portfolio</category>
+                
+            </item>
         
             <item>
                 <title>How to use Zaq: Codeigniter Template Parser Engine</title>

@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     if ($(".social-share").length > 0) {
         self_url = $(".social-share").attr('data-url');
-        getSocialPopularity(self_url);
+        getSocialPopularity(self_url, popularizeSocialInfo);
     }
 
     $(".social-popularity-analyzer-form").on("submit", function (ev) {
@@ -15,13 +15,17 @@ $(document).ready(function () {
             $("#url").focus();
         } else {
             // Valid URL
-            getSocialPopularity(url);
+            $(".social-popularity-analyzer-results").fadeOut();
+            $("#social-popularity-analyzer-submit").html('<i class="fa fa-cog fa-spin fa-fw"></i>');
+            $("#social-popularity-analyzer-submit").attr('disabled', 'disabled');
+            $("#social-popularity-analyzer-submit").addClass('busy');
+            getSocialPopularity(url, popularizeAnalyzer);
         }
     });
 
 });
 
-function getSocialPopularity(url) {
+function getSocialPopularity(url, callback) {
     $.ajax({
         url: "http://social-popularity.herokuapp.com/",
         method: "GET",
@@ -29,24 +33,20 @@ function getSocialPopularity(url) {
         contentType: "application/json",
         dataType: "jsonp",
         jsonpCallback: 'callback',
-        beforeSend: function () {
-            $(".social-popularity-analyzer-results").fadeOut();
-            $("#social-popularity-analyzer-submit").html('<i class="fa fa-cog fa-spin fa-fw"></i>');
-            $("#social-popularity-analyzer-submit").attr('disabled', 'disabled');
-            $("#social-popularity-analyzer-submit").addClass('busy');
-        },
-        success: function (response) {
-            popularizeSocialInfo(response);
-            $("#url").val('');
-            $(".social-popularity-analyzer-results").fadeIn();
-            $("#social-popularity-analyzer-submit").html('<i class="fa fa-flask fa-fw"></i> <span>Analyze</span>');
-            $("#social-popularity-analyzer-submit").removeAttr('disabled');
-            $("#social-popularity-analyzer-submit").removeClass('busy');
-        }
+        success: callback
     });
 }
 
-function popularizeSocialInfo(data) {
+function popularizeAnalyzer(data) {
+    
+    // Show Results
+    $("#url").val('');
+    $(".social-popularity-analyzer-results").fadeIn();
+    $("#social-popularity-analyzer-submit").html('<i class="fa fa-flask fa-fw"></i> <span>Analyze</span>');
+    $("#social-popularity-analyzer-submit").removeAttr('disabled');
+    $("#social-popularity-analyzer-submit").removeClass('busy');
+
+    // Show heading
     $("#analysis-report-heading").html("Analysis Report for " + decodeURIComponent(data.url));
 
     // Facebook
@@ -81,7 +81,9 @@ function popularizeSocialInfo(data) {
 
     // Buffer
     $("#buffer-share").html(data.social.buffer.share);
+}
 
+function popularizeSocialInfo(data) {
     // All Shares
     $(".shares-facebook").html(data.social.shares.facebook);
     $(".shares-twitter").html(data.social.shares.twitter);

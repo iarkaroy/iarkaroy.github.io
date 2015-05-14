@@ -216,20 +216,16 @@
     
     <url>
         <loc>http://www.arkaroy.net/about/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
+        <lastmod>2015-05-14T20:59:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
-    
-    
-    
-    
     
     
     
     <url>
         <loc>http://www.arkaroy.net/contact/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
+        <lastmod>2015-05-14T20:59:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -240,11 +236,9 @@
     
     
     
-    
-    
     <url>
-        <loc>http://www.arkaroy.net/search/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
+        <loc>http://www.arkaroy.net/portfolio/</loc>
+        <lastmod>2015-05-14T20:59:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -253,25 +247,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://www.arkaroy.net/portfolio/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://www.arkaroy.net/portfolio/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
+        <lastmod>2015-05-14T20:59:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -284,7 +260,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/social-popularity-analyzer/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
+        <lastmod>2015-05-14T20:59:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -297,7 +273,7 @@
     
     <url>
         <loc>http://www.arkaroy.net/blog/</loc>
-        <lastmod>2015-05-14T20:46:16+05:30</lastmod>
+        <lastmod>2015-05-14T20:59:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

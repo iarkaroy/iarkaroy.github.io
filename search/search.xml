@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <channel>
-        <title>Arka Roy</title>
-        <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
-        <link>http://www.arkaroy.net/</link>
-        <atom:link href="http://www.arkaroy.net/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Wed, 20 May 2015 15:35:56 +0530</pubDate>
-        <lastBuildDate>Wed, 20 May 2015 15:35:56 +0530</lastBuildDate>
-        
-            <item>
-                <title>Social Popularity Analyzer</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;A simple tool to analyze social popularity of any given url or link in different social media.&lt;/p&gt;
+<channel>
+    <title>Arka Roy</title>
+    <description>Provides professional services on web design, development, web application, digital marketing, social marketing.</description>
+    <link>http://www.arkaroy.net/</link>
+    <pubDate>Wed, 20 May 2015 15:35:56 +0530</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 15:35:56 +0530</lastBuildDate>
+    
+    <item>
+        <title>Social Popularity Analyzer</title>
+        <description>&lt;p&gt;A simple tool to analyze social popularity of any given url or link in different social media.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/social-popularity-analyzer/&quot;&gt;&lt;img src=&quot;/assets/image/social-popularity-analyzer-01.jpg&quot; alt=&quot;Social Popularity Analyzer&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-                <pubDate>Sun, 12 Apr 2015 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/social-popularity-analyzer/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/social-popularity-analyzer/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>A simple tool to analyze social popularity of any given url or link in different social media.</p>
+
+</excerpt>
+        <pubDate>Apr 12, 2015</pubDate>
+        <link>http://www.arkaroy.net/portfolio/social-popularity-analyzer/</link>
         
-            <item>
-                <title>How to use Zaq: Codeigniter Template Parser Engine</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>How to use Zaq: Codeigniter Template Parser Engine</title>
+        <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
 
 &lt;p&gt;Codeigniter, by default, comes with an optional template parser. But, unfortunately, that one does not provide sufficient pseudo markup to work with. Zaq, without doubt, is able to provide much more flexibility while building view files with pseudo markup to replace php codes.&lt;/p&gt;
 
@@ -270,27 +268,28 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;By default, &lt;code&gt;elapsed_time&lt;/code&gt; and &lt;code&gt;memory_usage&lt;/code&gt; have been added to the list of exceptions as these are Codeigniter’s default pseudo-markup tag.&lt;/p&gt;
 </description>
-                <pubDate>Wed, 08 Apr 2015 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</guid>
-                
-                    <category>php</category>
-                
-                    <category>template-parser</category>
-                
-                    <category>codeigniter</category>
-                
-                    <category>library</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.</p>
+
+</excerpt>
+        <pubDate>Apr 8, 2015</pubDate>
+        <link>http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/</link>
         
-            <item>
-                <title>Zaq: Codeigniter Template Parser Engine</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
+        <category>php</category>
+        
+        <category>template-parser</category>
+        
+        <category>codeigniter</category>
+        
+        <category>library</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Zaq: Codeigniter Template Parser Engine</title>
+        <description>&lt;p&gt;Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.&lt;/p&gt;
 
 &lt;p&gt;Codeigniter, by default, comes with an optional template parser. But, unfortunately, that one does not provide sufficient pseudo markup to work with. Zaq, without doubt, is able to provide much more flexibility while building view files with pseudo markup to replace php codes.&lt;/p&gt;
 
@@ -335,19 +334,20 @@ $config[&#39;enable_cache&#39;] = TRUE;
 
 &lt;p&gt;For usage instructions and more, visit &lt;a href=&quot;http://www.arkaroy.net/blog/how-to-use-zaq-codeigniter-template-parser/&quot;&gt;How to use Zaq: Codeigniter Template Parser Engine&lt;/a&gt;&lt;/p&gt;
 </description>
-                <pubDate>Sun, 05 Apr 2015 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>Zaq is a PHP based template parser engine developed to work with Codeigniter. This library has been developed for developers to integrate php codes in views easily. Using this library will also allow the view file to be more readable. View files in Codeigniter (or in any other framework following MVC) always contains both html and php codes which make them a bit harder to read. This problem can be eradicated by using a parser engine which makes the view files a lot more easier to work with.</p>
+
+</excerpt>
+        <pubDate>Apr 5, 2015</pubDate>
+        <link>http://www.arkaroy.net/portfolio/zaq-codeigniter-template-parser/</link>
         
-            <item>
-                <title>Category Pagination in Jekyll</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;This site is built on Jekyll - a blog aware static site generator. When I was building this, I wanted to separate my blog from my portfolio. Of course I would be using custom post type for my portfolio if I was developing on Wordpress. Here I thought to stay straight and simple and I just created two site categories: portfolio and blog and I am using custom permalink which makes it difficult to use the default pagination setup. And I also want to paginate only the blog category.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>Category Pagination in Jekyll</title>
+        <description>&lt;p&gt;This site is built on Jekyll - a blog aware static site generator. When I was building this, I wanted to separate my blog from my portfolio. Of course I would be using custom post type for my portfolio if I was developing on Wordpress. Here I thought to stay straight and simple and I just created two site categories: portfolio and blog and I am using custom permalink which makes it difficult to use the default pagination setup. And I also want to paginate only the blog category.&lt;/p&gt;
 
 &lt;p&gt;Here, in this tutorial, we will discuss on how to paginate a specific category in Jekyll with custom plugin built from scratch.&lt;/p&gt;
 
@@ -563,57 +563,62 @@ end
 
 &lt;p&gt;That is the end of our discussion. Hope you enjoyed it. Just give it a try.&lt;/p&gt;
 </description>
-                <pubDate>Sat, 28 Mar 2015 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/category-pagination-in-jekyll/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/category-pagination-in-jekyll/</guid>
-                
-                    <category>jekyll</category>
-                
-                    <category>ruby</category>
-                
-                    <category>pagination</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt>Jekyll has a built-in support for pagination. But it does not paginate the posts in a specific category. In this tutorial, we will discuss on how to paginate a specific category in Jekyll with custom plugin built from scratch.</excerpt>
+        <pubDate>Mar 28, 2015</pubDate>
+        <link>http://www.arkaroy.net/blog/category-pagination-in-jekyll/</link>
         
-            <item>
-                <title>DesignStudio: Flat Website Layout</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+        <category>jekyll</category>
+        
+        <category>ruby</category>
+        
+        <category>pagination</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>DesignStudio: Flat Website Layout</title>
+        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/designstudio-flat-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Fri, 23 Jan 2015 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+<br /><br />
+<img src="/assets/image/designstudio-flat-website-layout-01.jpg" alt="Project Screenshot" /></p>
+
+</excerpt>
+        <pubDate>Jan 23, 2015</pubDate>
+        <link>http://www.arkaroy.net/portfolio/design-studio-flat-website-layout/</link>
         
-            <item>
-                <title>Pixi: Website Layout</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>Pixi: Website Layout</title>
+        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/pixi-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Mon, 05 Jan 2015 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/pixi-website-layout-design/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/pixi-website-layout-design/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+<br /><br />
+<img src="/assets/image/pixi-website-layout-01.jpg" alt="Project Screenshot" /></p>
+
+</excerpt>
+        <pubDate>Jan 5, 2015</pubDate>
+        <link>http://www.arkaroy.net/portfolio/pixi-website-layout-design/</link>
         
-            <item>
-                <title>15 Best Bootstrap Alternatives for Web Developers</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;You have probably heard a lot about Bootstrap (aka Twiter Bootstrap). With this framework you can build a well structured, maintainable and up-gradable website. It also helps you save much on your time because there are plenty of readily available elements that you can use.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>15 Best Bootstrap Alternatives for Web Developers</title>
+        <description>&lt;p&gt;You have probably heard a lot about Bootstrap (aka Twiter Bootstrap). With this framework you can build a well structured, maintainable and up-gradable website. It also helps you save much on your time because there are plenty of readily available elements that you can use.&lt;/p&gt;
 
 &lt;p&gt;Choosing the right framework that is the perfect fit for your projects could be a little bit overwhelming - there are a lot to choose from. Perhaps, you want to go with popular choices like &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; or &lt;a href=&quot;http://foundation.zurb.com/&quot;&gt;Foundation&lt;/a&gt;, but if your website is going to be a fairly simple one, you won’t be needing most of the building blocks and materials included in the default package.&lt;/p&gt;
 
@@ -739,43 +744,49 @@ end
 
 &lt;p&gt;Through the SCSS stylesheet is included in the package, Toast allows you to easily configure the grid class names, the gutter, and even the column-base. For example, if you want the grid to be a 9-base column instead of 12, you can do that. Toast is a minimal CSS framework with very flexible configurations catered to meet your requirements.&lt;/p&gt;
 </description>
-                <pubDate>Sun, 21 Dec 2014 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</guid>
-                
-                    <category>bootstrap</category>
-                
-                    <category>foundation</category>
-                
-                    <category>css-framework</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>You have probably heard a lot about Bootstrap (aka Twiter Bootstrap). With this framework you can build a well structured, maintainable and up-gradable website. It also helps you save much on your time because there are plenty of readily available elements that you can use.</p>
+
+</excerpt>
+        <pubDate>Dec 21, 2014</pubDate>
+        <link>http://www.arkaroy.net/blog/15-best-bootstrap-alternatives-web-developers/</link>
         
-            <item>
-                <title>Simpi: Website Layout</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+        <category>bootstrap</category>
+        
+        <category>foundation</category>
+        
+        <category>css-framework</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Simpi: Website Layout</title>
+        <description>&lt;p&gt;This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
 &lt;br /&gt;&lt;br /&gt;
 &lt;a href=&quot;http://bit.ly/1DZKREH&quot; class=&quot;button js-force-center&quot; target=&quot;_blank&quot;&gt;Download PSD&lt;/a&gt;
 &lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/image/simpi-minimal-flat-website-layout-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Tue, 09 Dec 2014 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/simpi-website-layout/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/simpi-website-layout/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>This is a personal project of creating a simple flat layout which can be presented with grid system for responsive design.
+<br /><br />
+<a href="http://bit.ly/1DZKREH" class="button js-force-center" target="_blank">Download PSD</a>
+<br /><br />
+<img src="/assets/image/simpi-minimal-flat-website-layout-01.jpg" alt="Project Screenshot" /></p>
+
+</excerpt>
+        <pubDate>Dec 9, 2014</pubDate>
+        <link>http://www.arkaroy.net/portfolio/simpi-website-layout/</link>
         
-            <item>
-                <title>8 Icon Fonts to speed up Website Design Process</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Icon Fonts are nothing but fonts. But, instead of containing letters or numbers, they contain symbols and shapes. You can style them with CSS in the same way you style regular text which has made them a popular choice on the web in the process designing and developing websites and web applications.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>8 Icon Fonts to speed up Website Design Process</title>
+        <description>&lt;p&gt;Icon Fonts are nothing but fonts. But, instead of containing letters or numbers, they contain symbols and shapes. You can style them with CSS in the same way you style regular text which has made them a popular choice on the web in the process designing and developing websites and web applications.&lt;/p&gt;
 
 &lt;p&gt;They’re ideal for small, frequently used shapes such as email, envelopes, telephones, widget controls and social media logos. They also work in all modern browser.&lt;/p&gt;
 
@@ -815,25 +826,26 @@ end
 
 &lt;p&gt;If you want to create your own set of custom icon fonts, you can use online tools such as &lt;a href=&quot;http://fontello.com/&quot;&gt;Fontello&lt;/a&gt; or &lt;a href=&quot;https://icomoon.io/&quot;&gt;IcoMoon&lt;/a&gt;.&lt;/p&gt;
 </description>
-                <pubDate>Sun, 12 Oct 2014 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</guid>
-                
-                    <category>icon</category>
-                
-                    <category>font</category>
-                
-                    <category>css</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>Icon Fonts are nothing but fonts. But, instead of containing letters or numbers, they contain symbols and shapes. You can style them with CSS in the same way you style regular text which has made them a popular choice on the web in the process designing and developing websites and web applications.</p>
+
+</excerpt>
+        <pubDate>Oct 12, 2014</pubDate>
+        <link>http://www.arkaroy.net/blog/8-icon-fonts-to-speed-up-website-design-process/</link>
         
-            <item>
-                <title>Media Manager</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build a web application for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a simple but efficient web application for managing and showcasing their project albums. The application, Media Manager, is able to create and manage various type of album according to the need of Creocraft. Media Manager is also able to help users to crop and re-size the images before uploading. Youtube link can also be embedded. The main website of Creocraft communicate with the application through a special channel, technically API, to showcase the albums on the website.&lt;/p&gt;
+        <category>icon</category>
+        
+        <category>font</category>
+        
+        <category>css</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Media Manager</title>
+        <description>&lt;p&gt;Build a web application for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a simple but efficient web application for managing and showcasing their project albums. The application, Media Manager, is able to create and manage various type of album according to the need of Creocraft. Media Manager is also able to help users to crop and re-size the images before uploading. Youtube link can also be embedded. The main website of Creocraft communicate with the application through a special channel, technically API, to showcase the albums on the website.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -863,19 +875,20 @@ end
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/media-manager-web-app-07.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Sat, 13 Sep 2014 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/media-manager-web-application/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/media-manager-web-application/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>Build a web application for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a simple but efficient web application for managing and showcasing their project albums. The application, Media Manager, is able to create and manage various type of album according to the need of Creocraft. Media Manager is also able to help users to crop and re-size the images before uploading. Youtube link can also be embedded. The main website of Creocraft communicate with the application through a special channel, technically API, to showcase the albums on the website.</p>
+
+</excerpt>
+        <pubDate>Sep 13, 2014</pubDate>
+        <link>http://www.arkaroy.net/portfolio/media-manager-web-application/</link>
         
-            <item>
-                <title>Arka Roy</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build the website of Arka Roy (yes, that’s me).&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>Arka Roy</title>
+        <description>&lt;p&gt;Build the website of Arka Roy (yes, that’s me).&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -885,19 +898,20 @@ end
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/arka-roy-website-02.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Sat, 23 Aug 2014 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/arka-roy-website/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arka-roy-website/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>Build the website of Arka Roy (yes, that’s me).</p>
+
+</excerpt>
+        <pubDate>Aug 23, 2014</pubDate>
+        <link>http://www.arkaroy.net/portfolio/arka-roy-website/</link>
         
-            <item>
-                <title>Creocraft Ventures Website</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>Creocraft Ventures Website</title>
+        <description>&lt;p&gt;Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -919,19 +933,20 @@ end
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/creocraft-ventures-website-05.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Wed, 06 Aug 2014 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/creocraft-ventures-website/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/creocraft-ventures-website/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>Build the website for Creocraft Ventures – a leading event-management company having multiple offices around India. Creocraft needed a easy-to-use but innovative online presence to stand with dignity before their clients. The website is built with HTML5 and styled with the latest CSS3 technology. The website is made fully responsive keeping in mind the ease of use and readability.</p>
+
+</excerpt>
+        <pubDate>Aug 6, 2014</pubDate>
+        <link>http://www.arkaroy.net/portfolio/creocraft-ventures-website/</link>
         
-            <item>
-                <title>Download ZIP File Dynamically with PHP</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;ZIP is a very popular archive file format that supports lossless data compression. A .ZIP file may contain one or more files or folders that may have been compressed. ZIP files are used in almost every downloadable content as it is widely supported by almost all operating systems.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>Download ZIP File Dynamically with PHP</title>
+        <description>&lt;p&gt;ZIP is a very popular archive file format that supports lossless data compression. A .ZIP file may contain one or more files or folders that may have been compressed. ZIP files are used in almost every downloadable content as it is widely supported by almost all operating systems.&lt;/p&gt;
 
 &lt;p&gt;ZIP files generally use the file extensions “.zip” or “.ZIP” and the MIME media type &lt;code&gt;application/zip&lt;/code&gt;. ZIP is used as a base file format by many applications and tools. Most popular among them is WordPress. They use zip file format for themes, plugins and the application itself. And everything is done dynamically.&lt;/p&gt;
 
@@ -960,19 +975,18 @@ ob_end_flush();
 
 &lt;p&gt;Of course, the name of the downloaded file will be &lt;em&gt;My Awesome Zip File.zip&lt;/em&gt;.&lt;/p&gt;
 </description>
-                <pubDate>Wed, 23 Oct 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/download-zip-file-dynamically-with-php/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/download-zip-file-dynamically-with-php/</guid>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt>We will see how we can make a webpage act as an initializer to download a zip file. We will just provide the location of the file and PHP will download it to the user. In the back-end, the HTTP headers are responsible for the download. We will set the headers with PHP.</excerpt>
+        <pubDate>Oct 23, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/download-zip-file-dynamically-with-php/</link>
         
-            <item>
-                <title>How to Add Scalable Vector Graphics (SVG) to Web Page</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files.&lt;/p&gt;
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>How to Add Scalable Vector Graphics (SVG) to Web Page</title>
+        <description>&lt;p&gt;Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files.&lt;/p&gt;
 
 &lt;p&gt;If you want to embed your hand-crafted SVG in your web page, you can use any of the methods discussed below.&lt;/p&gt;
 
@@ -1053,19 +1067,20 @@ ob_end_flush();
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <pubDate>Sat, 19 Oct 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</guid>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files.</p>
+
+</excerpt>
+        <pubDate>Oct 19, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/how-to-add-scalable-vector-graphics-svg-to-web-page/</link>
         
-            <item>
-                <title>Create a File Upload Class in PHP</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;The basic process of providing a HTML form for uploading user submitted files to the server with PHP is fairly easy and simple. But there are some security implications that many of us are unaware of. We will be building a custom PHP class for secure file upload. This class will check the type and size of the file and rename the file in case of duplication.&lt;/p&gt;
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Create a File Upload Class in PHP</title>
+        <description>&lt;p&gt;The basic process of providing a HTML form for uploading user submitted files to the server with PHP is fairly easy and simple. But there are some security implications that many of us are unaware of. We will be building a custom PHP class for secure file upload. This class will check the type and size of the file and rename the file in case of duplication.&lt;/p&gt;
 
 &lt;p&gt;Those who are absolutely beginner in handling file upload, are requested to take a look at &lt;a href=&quot;http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/&quot;&gt;Enhance File Upload Security with PHP&lt;/a&gt;. That article will help you to better understand file uploading from scratch.&lt;/p&gt;
 
@@ -1362,27 +1377,28 @@ public function run() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <pubDate>Sun, 29 Sep 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/create-file-upload-class-in-php/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/create-file-upload-class-in-php/</guid>
-                
-                    <category>php</category>
-                
-                    <category>security</category>
-                
-                    <category>upload</category>
-                
-                    <category>class</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>The basic process of providing a HTML form for uploading user submitted files to the server with PHP is fairly easy and simple. But there are some security implications that many of us are unaware of. We will be building a custom PHP class for secure file upload. This class will check the type and size of the file and rename the file in case of duplication.</p>
+
+</excerpt>
+        <pubDate>Sep 29, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/create-file-upload-class-in-php/</link>
         
-            <item>
-                <title>Enhance File Upload Security with PHP</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;We often face a situation where we need to provide our users a way to upload image, pdf, document etc. The basic html form for file upload is able to handle this with the help of PHP. The basic process of uploading user submitted files to the server with PHP is fairly easy and simple. But there should be some security measures. What will happen if a bad user uploads a malicious file to our server?&lt;/p&gt;
+        <category>php</category>
+        
+        <category>security</category>
+        
+        <category>upload</category>
+        
+        <category>class</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Enhance File Upload Security with PHP</title>
+        <description>&lt;p&gt;We often face a situation where we need to provide our users a way to upload image, pdf, document etc. The basic html form for file upload is able to handle this with the help of PHP. The basic process of uploading user submitted files to the server with PHP is fairly easy and simple. But there should be some security measures. What will happen if a bad user uploads a malicious file to our server?&lt;/p&gt;
 
 &lt;p&gt;Here we will discuss some of this security measures to block the holes.&lt;/p&gt;
 
@@ -1505,25 +1521,26 @@ public function run() {
 
 &lt;p&gt;To avoid these situations and implement more validation, we will handle the upload a bit differently. We will &lt;a href=&quot;http://www.arkaroy.net/blog/create-file-upload-class-in-php/&quot;&gt;Create a File Upload Class in PHP&lt;/a&gt; to handle the file upload more efficiently.&lt;/p&gt;
 </description>
-                <pubDate>Tue, 17 Sep 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</guid>
-                
-                    <category>php</category>
-                
-                    <category>security</category>
-                
-                    <category>upload</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>We often face a situation where we need to provide our users a way to upload image, pdf, document etc. The basic html form for file upload is able to handle this with the help of PHP. The basic process of uploading user submitted files to the server with PHP is fairly easy and simple. But there should be some security measures. What will happen if a bad user uploads a malicious file to our server?</p>
+
+</excerpt>
+        <pubDate>Sep 17, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/enhance-file-upload-security-with-php/</link>
         
-            <item>
-                <title>Convert Relative Path to Absolute URL with PHP</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;I was developing a Web Crawler with PHP. But whenever I was crawling a url to get the links from that url, I found that most of the websites use relative path to link to their internal pages. The browser is smart enough to convert those relative paths to absolute url and request the correct page whenever those relative paths are clicked. But, as it seems, PHP does not have any inbuilt support to convert those relative paths to absolute urls.&lt;/p&gt;
+        <category>php</category>
+        
+        <category>security</category>
+        
+        <category>upload</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Convert Relative Path to Absolute URL with PHP</title>
+        <description>&lt;p&gt;I was developing a Web Crawler with PHP. But whenever I was crawling a url to get the links from that url, I found that most of the websites use relative path to link to their internal pages. The browser is smart enough to convert those relative paths to absolute url and request the correct page whenever those relative paths are clicked. But, as it seems, PHP does not have any inbuilt support to convert those relative paths to absolute urls.&lt;/p&gt;
 
 &lt;p&gt;Therefore, I decided to define a method to do the job. Here I am sharing my method of converting relative path to absolute url.&lt;/p&gt;
 
@@ -1632,27 +1649,28 @@ echo absoluteUrl(&#39;../../foo.html&#39;, &#39;http://example.com/dir/foo/bar/i
 // Output: http://example.com/dir/foo.html
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <pubDate>Tue, 03 Sep 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/convert-relative-path-to-absolute-url-with-php/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/convert-relative-path-to-absolute-url-with-php/</guid>
-                
-                    <category>php</category>
-                
-                    <category>url</category>
-                
-                    <category>absolute-url</category>
-                
-                    <category>relative-path</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>I was developing a Web Crawler with PHP. But whenever I was crawling a url to get the links from that url, I found that most of the websites use relative path to link to their internal pages. The browser is smart enough to convert those relative paths to absolute url and request the correct page whenever those relative paths are clicked. But, as it seems, PHP does not have any inbuilt support to convert those relative paths to absolute urls.</p>
+
+</excerpt>
+        <pubDate>Sep 3, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/convert-relative-path-to-absolute-url-with-php/</link>
         
-            <item>
-                <title>Advantages of HTML5</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;HTML5 is the new definition of web designing. It has been designed to replace both HTML 4, XHTML, and the HTML DOM Level 2. HTML5 is specially designed to deliver rich content without the need for additional plugins. The current version delivers everything from animation to graphics, music to movies, and can also be used to build complicated web applications. HTML5 is also cross-platform. It is designed to work whether you are using a PC, or a Tablet, a Smartphone, or a Smart TV.&lt;/p&gt;
+        <category>php</category>
+        
+        <category>url</category>
+        
+        <category>absolute-url</category>
+        
+        <category>relative-path</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Advantages of HTML5</title>
+        <description>&lt;p&gt;HTML5 is the new definition of web designing. It has been designed to replace both HTML 4, XHTML, and the HTML DOM Level 2. HTML5 is specially designed to deliver rich content without the need for additional plugins. The current version delivers everything from animation to graphics, music to movies, and can also be used to build complicated web applications. HTML5 is also cross-platform. It is designed to work whether you are using a PC, or a Tablet, a Smartphone, or a Smart TV.&lt;/p&gt;
 
 &lt;p&gt;Lets discuss some advantages or beneficial features of HTML5.&lt;/p&gt;
 
@@ -1716,23 +1734,22 @@ echo absoluteUrl(&#39;../../foo.html&#39;, &#39;http://example.com/dir/foo/bar/i
 
 &lt;p&gt;Geo-location is used to track your location and share it with others. Your IP address, wireless network connection, the cell tower your phone is connected to, or the recent GPS hardware can all help in tracking your location. The new HTML5 Geo-location APIs make information, about your location, generated via GPS or other methods, directly available to any application with an HTML5-compatible browser.&lt;/p&gt;
 </description>
-                <pubDate>Fri, 16 Aug 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/advantages-html5/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/advantages-html5/</guid>
-                
-                    <category>html5</category>
-                
-                    <category>semantic</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt>HTML5 is the new definition of web designing. It has been designed to replace both HTML 4, XHTML, and the HTML DOM Level 2. HTML5 is specially designed to deliver rich content without the need for additional plugins. The current version delivers everything from animation to graphics, music to movies, and can also be used to build complicated web applications. HTML5 is also cross-platform. It is designed to work whether you are using a PC, or a Tablet, a Smartphone, or a Smart TV.</excerpt>
+        <pubDate>Aug 16, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/advantages-html5/</link>
         
-            <item>
-                <title>Drop Cap Letters in CSS</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Drop Cap is a traditional newspaper technique of making the first letter of a paragraph capital and take the height of three or four lines. In that way, it is easier to grab the attention of the reader and specify the start of a section.&lt;/p&gt;
+        <category>html5</category>
+        
+        <category>semantic</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Drop Cap Letters in CSS</title>
+        <description>&lt;p&gt;Drop Cap is a traditional newspaper technique of making the first letter of a paragraph capital and take the height of three or four lines. In that way, it is easier to grab the attention of the reader and specify the start of a section.&lt;/p&gt;
 
 &lt;p&gt;In this tutorial we are going to implement that style in our css using a new CSS3 technique.&lt;/p&gt;
 
@@ -1761,25 +1778,24 @@ echo absoluteUrl(&#39;../../foo.html&#39;, &#39;http://example.com/dir/foo/bar/i
 
 &lt;p&gt;This css will stylize the first letter exactly how we want.&lt;/p&gt;
 </description>
-                <pubDate>Tue, 23 Jul 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</guid>
-                
-                    <category>css</category>
-                
-                    <category>typography</category>
-                
-                    <category>drop-cap</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt>In this tutorial we will use CSS3 to create Drop Cap, a traditional newspaper technique of making the first letter of a paragraph capital and take the height of three or four lines. In that way, it is easier to grab the attention of the reader and specify the start of a section.</excerpt>
+        <pubDate>Jul 23, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/how-to-create-drop-cap-letters-in-css/</link>
         
-            <item>
-                <title>Early Devices to Project Animation before Films</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Numerous devices which successfully displayed animated images were introduced well before the advent of the motion picture. These devices were used to entertain, amaze and sometimes even frighten people. The majority of these devices did not project their images and accordingly could only be viewed by a single person at any one time. For this reason, they were considered toys rather than being a large scale entertainment industry like later animation. Many of these devices are still built by and for film students being taught the basic principles of animation.&lt;/p&gt;
+        <category>css</category>
+        
+        <category>typography</category>
+        
+        <category>drop-cap</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Early Devices to Project Animation before Films</title>
+        <description>&lt;p&gt;Numerous devices which successfully displayed animated images were introduced well before the advent of the motion picture. These devices were used to entertain, amaze and sometimes even frighten people. The majority of these devices did not project their images and accordingly could only be viewed by a single person at any one time. For this reason, they were considered toys rather than being a large scale entertainment industry like later animation. Many of these devices are still built by and for film students being taught the basic principles of animation.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1819,41 +1835,43 @@ echo absoluteUrl(&#39;../../foo.html&#39;, &#39;http://example.com/dir/foo/bar/i
 
 &lt;p&gt;The first animated projection (screening) was created in France, by Charles-Emile Reynaud, who was a French science teacher. Reynaud created the Praxinoscope in 1877 and the Theatre Optique in December 1888. On 28 October 1892, he projected the first animation in public, Pauvre Pierrot, at the Musee Grevin in Paris. This film is also notable as the first known instance of film perforations being used. His films were not photographed, but drawn directly onto the transparent strip. In 1900, more than 500,000 people had attended these screenings.&lt;/p&gt;
 </description>
-                <pubDate>Wed, 05 Jun 2013 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/blog/early-devices-to-project-animation-before-films/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/blog/early-devices-to-project-animation-before-films/</guid>
-                
-                    <category>animation</category>
-                
-                    <category>projection</category>
-                
-                
-                    <category>blog</category>
-                
-            </item>
+        <excerpt><p>Numerous devices which successfully displayed animated images were introduced well before the advent of the motion picture. These devices were used to entertain, amaze and sometimes even frighten people. The majority of these devices did not project their images and accordingly could only be viewed by a single person at any one time. For this reason, they were considered toys rather than being a large scale entertainment industry like later animation. Many of these devices are still built by and for film students being taught the basic principles of animation.</p>
+
+</excerpt>
+        <pubDate>Jun 5, 2013</pubDate>
+        <link>http://www.arkaroy.net/blog/early-devices-to-project-animation-before-films/</link>
         
-            <item>
-                <title>Student Resource Manager</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build a web application for Arena Animation to fulfill the need of a efficient but easy-to-use web-based platform for managing students and the resources allocated for them.&lt;/p&gt;
+        <category>animation</category>
+        
+        <category>projection</category>
+        
+        
+        <category>blog</category>
+        
+    </item>
+    
+    <item>
+        <title>Student Resource Manager</title>
+        <description>&lt;p&gt;Build a web application for Arena Animation to fulfill the need of a efficient but easy-to-use web-based platform for managing students and the resources allocated for them.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/student-resource-manager-web-app-01.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Wed, 23 May 2012 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/student-resource-manager-web-application/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/student-resource-manager-web-application/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>Build a web application for Arena Animation to fulfill the need of a efficient but easy-to-use web-based platform for managing students and the resources allocated for them.</p>
+
+</excerpt>
+        <pubDate>May 23, 2012</pubDate>
+        <link>http://www.arkaroy.net/portfolio/student-resource-manager-web-application/</link>
         
-            <item>
-                <title>Arena Animation Landing Page</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>Arena Animation Landing Page</title>
+        <description>&lt;p&gt;Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1867,19 +1885,20 @@ echo absoluteUrl(&#39;../../foo.html&#39;, &#39;http://example.com/dir/foo/bar/i
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-landing-page-03.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Tue, 10 Apr 2012 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-landing-page/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>Build the landing page for Arena Animation – a leading institute providing professional training on multimedia and animation – for lead generation. Call-to-Action has been integrated with sharp color contrast. Simple, smart and eye-catching design is for targeting a broader variety of users. The design is fully responsive which makes it compatible with various screen sizes.</p>
+
+</excerpt>
+        <pubDate>Apr 10, 2012</pubDate>
+        <link>http://www.arkaroy.net/portfolio/arena-animation-landing-page/</link>
         
-            <item>
-                <title>Arena Animation Website</title>
-                <dc:creator>Arka Roy</dc:creator>
-                <description>&lt;p&gt;Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.&lt;/p&gt;
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+    <item>
+        <title>Arena Animation Website</title>
+        <description>&lt;p&gt;Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1909,14 +1928,15 @@ echo absoluteUrl(&#39;../../foo.html&#39;, &#39;http://example.com/dir/foo/bar/i
 
 &lt;p&gt;&lt;img src=&quot;/assets/image/arena-animation-website-07.jpg&quot; alt=&quot;Project Screenshot&quot; /&gt;&lt;/p&gt;
 </description>
-                <pubDate>Wed, 21 Mar 2012 00:00:00 +0530</pubDate>
-                <link>http://www.arkaroy.net/portfolio/arena-animation-website/</link>
-                <guid isPermaLink="true">http://www.arkaroy.net/portfolio/arena-animation-website/</guid>
-                
-                
-                    <category>portfolio</category>
-                
-            </item>
+        <excerpt><p>Build the website for Arena Animation - a leading institute providing professional training on multimedia and animation. The project incorporates delivering visual aids, easy-to-use and enhanced readability. The design is fully responsive which makes it compatible with various screen sizes.</p>
+
+</excerpt>
+        <pubDate>Mar 21, 2012</pubDate>
+        <link>http://www.arkaroy.net/portfolio/arena-animation-website/</link>
         
-    </channel>
-</rss>
+        
+        <category>portfolio</category>
+        
+    </item>
+    
+</channel>

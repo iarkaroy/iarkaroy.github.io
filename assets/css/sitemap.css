@@ -1,0 +1,11 @@
+urlset {
+    display: table;
+}
+url {
+    display: table-row;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+url * {
+    display: table-cell;
+}
